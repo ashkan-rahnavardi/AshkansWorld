@@ -33,10 +33,16 @@ const texts: ScrambleTexts = [
 ];
 
 function Start() {
-	const [pause, setPause] = useState(false);
+	const [pause, setPause] = useState(true);
+
+	useEffect(() => {
+		setTimeout(() => {
+			setPause(false);
+		}, 300);
+	}, []);
 	return (
 		<header id="start">
-			<div className="h-screen w-screen bg-start-page bg-cover relative fixed top-0 left-0 overflow-hidden z-0 flex justify-center items-center">
+			<div className="h-screen w-screen bg-start-page bg-cover relative top-0 left-0 overflow-hidden z-0 flex justify-center items-center">
 				<div className="text-primary">
 					<h1>
 						Hi, my name is <strong>Ashkan Rahnavardi</strong>
