@@ -10,9 +10,9 @@ const texts = [
 	'models',
 	'UI/UX',
 ] as const;
-	
+
 function Start() {
-	const scrambledText = useTextScramble(texts, { paused: false });
+	const scrambledText = useTextScramble(texts);
 	return (
 		<header id="start">
 			<div className="h-screen w-screen bg-start-page bg-cover fixed top-0 left-0 overflow-hidden z-0 flex justify-center items-center">
