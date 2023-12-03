@@ -10,7 +10,7 @@ const texts = [
 	'models',
 	'UI/UX',
 ] as const;
-
+	
 function Start() {
 	const scrambledText = useTextScramble(texts, { paused: false });
 	return (
