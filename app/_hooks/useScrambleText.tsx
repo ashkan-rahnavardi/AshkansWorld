@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-function randomItem<T>(array: T[]): T {
+function randomItem<T>(array: Readonly<T[]>): T {
     return array[Math.floor(Math.random() * array.length)];
 }
 
