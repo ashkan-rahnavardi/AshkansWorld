@@ -1,48 +1,57 @@
 'use client';
-import { RandomReveal } from 'react-random-reveal';
 
-import dynamic from 'next/dynamic';
+// normal import
+import TextScramble, { ScrambleTexts } from '@twistezo/react-text-scramble';
 
-// Load TextScramble dynamically only on the client side
-const TextScramble = dynamic(() => import('@twistezo/react-text-scramble'), {
-	ssr: false,
-});
+// dynamically import local version of TextScramble with ssr: false
+//
+// import dynamic from 'next/dynamic';
+// import { ScrambleTexts } from '../_utils/types';
+// const TextScramble = dynamic(() => import('./scramble'), {
+// 	ssr: false,
+// });
 
-// import TextScramble, { ScrambleTexts } from '@twistezo/react-text-scramble';
+// dynamically import global version of TextScramble with ssr: false
+//
+// import dynamic from 'next/dynamic';
+// import { ScrambleTexts } from '../_utils/types';
+// const TextScramble = dynamic(() => import('@twistezo/react-text-scramble'), {
+// 	ssr: false,
+// });
+
 import React, { useEffect, useRef, useState } from 'react';
-// import Background from '../../public/background4.jpg';
+
+import { default as NoSSRWrapper } from './noSSRWrapper';
+
+const texts: ScrambleTexts = [
+	'things',
+	'websites',
+	'mobile apps',
+	'web apps',
+	'models',
+	'UI/UX',
+];
 
 function Start() {
-	const scrambleTexts = [
-		'websites',
-		'things',
-
-		'mobile apps',
-		'web apps',
-		'models',
-		'UI/UX',
-	];
-
 	const [pause, setPause] = useState(false);
-
 	return (
 		<header id="start">
 			<div className="h-screen w-screen bg-start-page bg-cover relative fixed top-0 left-0 overflow-hidden z-0 flex justify-center items-center">
 				<div className="text-primary">
-					<h1>Hello</h1>
-
-					{/* Both RandomReveal And TextScramble Cause the same error, I'd rather use TextScramble 
-					since it has more features relevant to me.  */}
-
-					{/* <RandomReveal isPlaying duration={2} characters="hello world" /> */}
-
-					<TextScramble
-						texts={scrambleTexts}
-						letterSpeed={5}
-						nextLetterSpeed={100}
-						pauseTime={3000}
-						paused={pause}
-					/>
+					<h1>
+						Hi, my name is <strong>Ashkan Rahnavardi</strong>
+						<br></br>
+					</h1>
+					<h1>I design and develop</h1>
+					<NoSSRWrapper>
+						<TextScramble
+							texts={texts}
+							letterSpeed={5}
+							nextLetterSpeed={100}
+							pauseTime={1500}
+							paused={pause}
+						/>
+					</NoSSRWrapper>
 				</div>
 			</div>
 		</header>
