@@ -1,27 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap'); */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	line-height: 1.5;
+	/* background-color: #1a1527; */
+	font-family: Roboto Condensed, Lato, Arial, sans-serif !important;
+}
+
+.navbar-item {
+	color: hsla(0, 0%, 100%, 0.5);
+	font-size: 22px;
+	font-weight: 700;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+
+.navbar-dropdown {
+	background-image: linear-gradient(-180deg, #0e0c16, #0e0c16 88%, #0e0c16 99%);
+	box-shadow: 0 0 50px 80px #0e0c16;
 }
