@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@twistezo/react-text-scramble": "^1.0.6",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
