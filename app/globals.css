@@ -4,6 +4,8 @@
 @tailwind utilities;
 
 body {
+	margin: 0;
+	padding: 0;
 	line-height: 1.5;
 	/* background-color: #1a1527; */
 	font-family: Roboto Condensed, Lato, Arial, sans-serif !important;
@@ -24,12 +26,12 @@ body {
 
 .timeline {
 	background-color: #5918df;
-	height: 60vh;
+	height: 300%;
 	left: -10px;
-	position: relative;
-	/* top: 13px; */
+	position: absolute;
+	top: 13px;
 	width: 1px;
-	z-index: 20;
+	z-index: 9;
 }
 
 .timeline.alt {
@@ -51,40 +53,16 @@ body {
 	left: -4px;
 	top: 0;
 	width: 9px;
-	z-index: 20;
+	z-index: 10;
 }
 
-.block-reveal {
-	align-items: center;
-	display: flex;
-	/* display: inline-block; */
+#work {
+	background-color: #0f0d15;
+	background-image: linear-gradient(-180deg, #1a1527, #0e0c16 88%, #0e0c16 99%);
+	background-position: top;
+	background-repeat: repeat-x;
+	height: auto;
+	/* min-height: 3000px;  */
 	overflow: hidden;
 	position: relative;
-}
-
-.block-reveal--active .block-reveal__block {
-	animation: block-rev-block 0.8s;
-	animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
-}
-
-.white {
-	background-color: #f9f9f9;
-}
-
-.block-reveal__block {
-	background: #5918df;
-	content: '';
-	height: 100%;
-	position: absolute;
-	transform: translateX(calc(100% + 1px));
-	width: 100%;
-	will-change: transform;
-	z-index: 1;
-}
-
-.block-reveal--active .block-reveal__text {
-	animation: block-reveal-text 0s;
-	animation-delay: 0.4s;
-	animation-fill-mode: forwards;
-	will-change: transform, opacity;
 }
