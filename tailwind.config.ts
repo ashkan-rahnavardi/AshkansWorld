@@ -9,11 +9,15 @@ const config: Config = {
 	theme: {
 		fontFamily: {
 			roboto: ['Roboto Condensed', 'sans-serif'],
+			serif: ['Palatino', 'Georgia', 'Times New Roman'],
+			mono: ['Roboto Mono', 'Courier New', 'Courier'],
 		},
 		extend: {
 			colors: {
 				primary: '#f9f9f9',
 				primaryDark: '#494949',
+				primaryGray: '#989e9f',
+				purple: '#5918df',
 			},
 			backgroundImage: {
 				'start-page': "url('/background4.jpg')",
