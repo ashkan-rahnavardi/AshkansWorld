@@ -10,7 +10,7 @@ function Start() {
 	return (
 		<header id="start">
 			<div className="min-h-screen w-screen bg-start-page bg-cover flex items-center">
-				<div className="mx-auto relative w-7/12">
+				<div className="mx-auto relative w-10/12 md:w-7/12">
 					<div className="timeline">
 						<div className="bullet"></div>
 					</div>

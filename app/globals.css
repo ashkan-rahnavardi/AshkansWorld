@@ -72,6 +72,25 @@ body {
 	z-index: 10;
 }
 
+#work::before {
+	color: #221d35;
+	content: 'WEB';
+	font-family: Roboto Mono, Courier New, Courier, monospace !important;
+	font-size: 270px;
+	font-weight: 700;
+	right: -1rem;
+	top: -5rem;
+	position: absolute;
+}
+
+@media (max-width: 768px) {
+	#work::before {
+		font-size: 100px;
+		top: 4rem;
+		right: 0;
+	}
+}
+
 #work {
 	background-color: #0f0d15;
 	background-image: linear-gradient(-180deg, #1a1527, #0e0c16 88%, #0e0c16 99%);
@@ -84,4 +103,41 @@ body {
 
 .inner-element {
 	transform: translateZ(60px);
+}
+
+.plate {
+	width: 455px;
+	height: 224px;
+	left: -4.5rem;
+
+	@media (max-width: 768px) {
+		width: 200px;
+		height: 99px;
+		left: 3.5rem;
+	}
+}
+
+.wayfinder {
+	width: 224px;
+	height: 455px;
+	bottom: 32rem;
+	left: 34rem;
+
+	@media (max-width: 768px) {
+		width: 200px;
+		height: 407px;
+		left: 3.5rem;
+		bottom: 0;
+	}
+}
+
+.sotby {
+	width: 455px;
+	height: 224px;
+
+	@media (max-width: 768px) {
+		width: 200px;
+		height: 99px;
+		left: 3.5rem;
+	}
 }
