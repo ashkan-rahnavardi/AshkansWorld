@@ -12,6 +12,7 @@
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
+    "react-parallax-tilt": "^1.7.176",
     "react-random-reveal": "^2.0.0"
   },
   "devDependencies": {
