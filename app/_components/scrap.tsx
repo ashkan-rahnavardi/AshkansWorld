@@ -61,7 +61,6 @@ function skills() {
 			'UX/UI',
 			'REST API',
 			'GraphQL',
-			'Jest',
 			'npm/yarn',
 			'Webpack',
 			'Babel',

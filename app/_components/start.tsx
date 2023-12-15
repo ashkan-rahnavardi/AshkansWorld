@@ -12,14 +12,15 @@ function Start() {
 
 	return (
 		<header id="start">
-			<div className="min-h-screen w-screen bg-start-page bg-cover flex">
-				<div className="relative w-full flex items-center self-center justify-center">
-					<div className="section-container mx-auto">
+			<div className="min-h-screen w-screen bg-start-page bg-cover flex relative container-fluid">
+				<div className="relative row w-full flex flex-initial items-center self-center justify-center">
+					{/* <div className="section-container mx-auto"> */}
+					<div className="mx-auto col-sm-7 col-md-7 col-9">
 						<div className="timeline">
 							<div className="bullet"></div>
 						</div>
 
-						<div className="text-primary space-y-4 m-4">
+						<div className="text-primary space-y-4">
 							<small className="text-primaryGray">
 								Start<span className="ml-1">/&gt;</span>
 							</small>

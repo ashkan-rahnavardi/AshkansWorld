@@ -2,23 +2,15 @@
 
 function About() {
 	return (
-		<div
-			id="about"
-			className="min-h-screen w-screen overflow-hidden flex relative justify-center"
-		>
-			<div className="relative w-full flex justify-center">
-				<div className="section-container mx-auto">
-					<div className="timeline alt">
-						<div className="bullet"></div>
-					</div>
+		<div id="about" className="container-fluid">
+			<div className="row w-full self-top items-start justify-center">
+				<div className="pt-0 col-sm-9 col-md-9 offset-sm-2 col-10 offset-1">
+					<div className="timeline alt"></div>
+					<small className="section-title bullet-title alt">
+						About<span className="ml-1">/&gt;</span>
+					</small>
 
-					<div className="text-primaryGray space-y-4 m-4">
-						<small>
-							About<span className="ml-1">/&gt;</span>
-						</small>
-					</div>
-
-					<div className="mt-3 mx-4 font-mono text-base text-primary">
+					<div className="mt-3 font-mono text-base text-primary">
 						<div className="code" data-line-nr="01">
 							<div className="methods">class</div>
 							<span className="propname"> Ashkan Rahnavardi </span>
@@ -31,7 +23,7 @@ function About() {
 						<div className="code" data-line-nr="03">
 							<div className="dot">..</div>
 							<div className="comment">
-								&#47;&#47; Only time stands between me and my aspirations.
+								&#47;&#47; Only time stands between me and my goals.
 							</div>
 						</div>
 						<div className="code" data-line-nr="04">
@@ -90,7 +82,7 @@ function About() {
 						<div className="code" data-line-nr="12">
 							<div className="dot">......</div>
 							&#123;
-							<span className="string"> &#39;Summer23&#39; </span>
+							<span className="string"> &#39;Summer-23&#39; </span>
 							&#58;
 							<span className="string">
 								{' '}
@@ -209,6 +201,44 @@ function About() {
 							<span className="string"> &#39;SQL Server&#39;</span>,
 							<span className="string"> &#39;Firebase&#39;</span>
 							&#93;,
+						</div>
+						<div className="code" data-line-nr="27">
+							<div className="dot">......</div>
+							<span className="key">Tools </span>
+							&#58; &#91;
+							<span className="string"> &#39;AWS&#39;</span>,
+							<span className="string"> &#39;Github&#39;</span>,
+							<span className="string"> &#39;Docker&#39;</span>
+							<span className="string"> &#39;npm/yarn&#39;</span>,
+							<span className="string"> &#39;Webpack&#39;</span>,
+							<span className="string"> &#39;Babel&#39;</span>,
+							<span className="string"> &#39;Figma&#39;</span>,
+							<span className="string"> &#39;Photoshop&#39;</span>&#93;,
+						</div>
+						<div className="code" data-line-nr="28">
+							<div className="dot">......</div>
+							<span className="key">MachineLearning </span>
+							&#58; &#91;
+							<span className="string"> &#39;TensorFlow&#39;</span>,
+							<span className="string"> &#39;PyTorch&#39;</span>,
+							<span className="string"> &#39;Scikit-Learn&#39;</span>
+							<span className="string"> &#39;Matplotlib&#39;</span>,
+							<span className="string"> &#39;Pandas&#39;</span>,
+							<span className="string"> &#39;NLTK&#39;</span>,
+							<span className="string"> &#39;NumPy&#39;</span>,
+							<span className="string"> &#39;Keras&#39;</span>&#93;
+							<span className="cursor"></span>
+						</div>
+						<div className="code" data-line-nr="29">
+							<div className="dot">....</div>
+							&#125;
+						</div>
+						<div className="code" data-line-nr="30">
+							<div className="dot">..</div>
+							&#125;
+						</div>
+						<div className="code" data-line-nr="31">
+							&#125;
 						</div>
 					</div>
 				</div>
