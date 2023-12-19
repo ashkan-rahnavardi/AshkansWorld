@@ -208,7 +208,7 @@ function About() {
 							&#58; &#91;
 							<span className="string"> &#39;AWS&#39;</span>,
 							<span className="string"> &#39;Github&#39;</span>,
-							<span className="string"> &#39;Docker&#39;</span>
+							<span className="string"> &#39;Docker&#39;</span>,
 							<span className="string"> &#39;npm/yarn&#39;</span>,
 							<span className="string"> &#39;Webpack&#39;</span>,
 							<span className="string"> &#39;Babel&#39;</span>,
@@ -221,7 +221,7 @@ function About() {
 							&#58; &#91;
 							<span className="string"> &#39;TensorFlow&#39;</span>,
 							<span className="string"> &#39;PyTorch&#39;</span>,
-							<span className="string"> &#39;Scikit-Learn&#39;</span>
+							<span className="string"> &#39;Scikit-Learn&#39;</span>,
 							<span className="string"> &#39;Matplotlib&#39;</span>,
 							<span className="string"> &#39;Pandas&#39;</span>,
 							<span className="string"> &#39;NLTK&#39;</span>,

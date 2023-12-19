@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import Tilt from 'react-parallax-tilt';
 
 function Work() {
@@ -13,11 +14,13 @@ function Work() {
 			title1: string;
 			title2: string;
 			num: string;
+			route: string;
 		};
 	}) => {
-		const { imageUrl, containerClass, bgSize, title1, title2, num } = project;
+		const { imageUrl, containerClass, bgSize, title1, title2, num, route } =
+			project;
 		return (
-			<div className={containerClass}>
+			<Link className={containerClass} href={route}>
 				<Tilt
 					perspective={500}
 					glareEnable={true}
@@ -39,7 +42,7 @@ function Work() {
 						<p className="text-primaryGray font-mono text-lg">→</p>
 					</div>
 				</Tilt>
-			</div>
+			</Link>
 		);
 	};
 
@@ -50,6 +53,7 @@ function Work() {
 		title1: 'Plate',
 		title2: 'Grabber',
 		num: '00',
+		route: '/projects/Plate-Grabber',
 	};
 	const sotBy = {
 		imageUrl: '/sotby3.png',
@@ -58,6 +62,7 @@ function Work() {
 		title1: 'SotBy',
 		title2: '',
 		num: '01',
+		route: '/projects/SotBy',
 	};
 	const wayFinder = {
 		imageUrl: '/wayfinder.png',
@@ -66,6 +71,7 @@ function Work() {
 		title1: 'Way',
 		title2: 'Finder',
 		num: '02',
+		route: '/projects/WayFinder',
 	};
 
 	return (
