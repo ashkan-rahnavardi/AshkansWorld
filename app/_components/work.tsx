@@ -56,7 +56,7 @@ function Work() {
 		route: '/projects/Plate-Grabber',
 	};
 	const sotBy = {
-		imageUrl: '/sotby3.png',
+		imageUrl: '/sotby/projectCard.png',
 		containerClass: 'sotby',
 		bgSize: 'project-image-h',
 		title1: 'SotBy',

@@ -14,7 +14,11 @@ function Contact() {
 						<div className="main-footer">
 							<h2 className="social-title">Find me on:</h2>
 							<div className="w-full my-4 social-wrp">
-								<a className="social-link flex items-end mb-4">
+								<a
+									className="social-link flex items-end mb-4"
+									href="https://www.linkedin.com/in/ashkan-rahnavardi/"
+									target="_blank"
+								>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										width="36px"
@@ -27,31 +31,31 @@ function Contact() {
 											data-name="layer1"
 											fill="#5918df"
 											stroke="#202020"
-											stroke-linecap="round"
-											stroke-miterlimit="10"
-											stroke-width="2"
+											strokeLinecap="round"
+											strokeMiterlimit="10"
+											strokeWidth="2"
 											d="M3.078 22.331h12.188v36.844H3.078z"
-											stroke-linejoin="round"
+											strokeLinejoin="round"
 										></path>
 										<path
 											data-name="layer2"
 											d="M46.719 21.112c-5.344 0-8.531 1.969-11.906 6.281v-5.062H22.625v36.844h12.281V39.206c0-4.219 2.156-8.344 7.031-8.344s7.781 4.125 7.781 8.25v20.063H62V38.269c0-14.532-9.844-17.157-15.281-17.157z"
 											fill="#5918df"
 											stroke="#202020"
-											stroke-linecap="round"
-											stroke-miterlimit="10"
-											stroke-width="2"
-											stroke-linejoin="round"
+											strokeLinecap="round"
+											strokeMiterlimit="10"
+											strokeWidth="2"
+											strokeLinejoin="round"
 										></path>
 										<path
 											data-name="layer1"
 											d="M9.219 4.425C5.188 4.425 2 7.331 2 10.894s3.188 6.469 7.219 6.469 7.219-2.906 7.219-6.469-3.188-6.469-7.219-6.469z"
 											fill="#5918df"
 											stroke="#202020"
-											stroke-linecap="round"
-											stroke-miterlimit="10"
-											stroke-width="2"
-											stroke-linejoin="round"
+											strokeLinecap="round"
+											strokeMiterlimit="10"
+											strokeWidth="2"
+											strokeLinejoin="round"
 										></path>
 									</svg>
 									{/* <svg
@@ -69,7 +73,11 @@ function Contact() {
 									</svg> */}
 									<span className="ml-2">in/ashkan.rahnavardi</span>
 								</a>
-								<a className="social-link flex items-end mb-4">
+								<a
+									className="social-link flex items-end mb-4"
+									href="https://github.com/ashkan-rahnavardi"
+									target="_blank"
+								>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										version="1.1"
@@ -106,21 +114,21 @@ function Contact() {
 											data-name="layer2"
 											fill="none"
 											stroke="#5918df"
-											stroke-miterlimit="10"
-											stroke-width="2"
+											strokeMiterlimit="10"
+											strokeWidth="2"
 											d="M2 12l30 27.4L62 12"
-											stroke-linejoin="round"
-											stroke-linecap="round"
+											strokeLinejoin="round"
+											strokeLinecap="round"
 										></path>
 										<path
 											data-name="layer1"
 											fill="none"
 											stroke="#5918df"
-											stroke-miterlimit="10"
-											stroke-width="2"
+											strokeMiterlimit="10"
+											strokeWidth="2"
 											d="M2 12h60v40H2z"
-											stroke-linejoin="round"
-											stroke-linecap="round"
+											strokeLinejoin="round"
+											strokeLinecap="round"
 										></path>
 									</svg>
 									<span className="ml-2">ashkan.rahnavardi@gmail.com</span>

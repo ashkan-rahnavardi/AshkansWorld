@@ -365,9 +365,10 @@ body {
 	content: '';
 	height: 100%;
 	left: -100%;
+	width: 250%;
 	position: absolute;
 	top: 0;
-	width: 300%;
+
 	z-index: -2;
 }
 
@@ -534,6 +535,7 @@ footer {
 	display: flex;
 	justify-content: center;
 	width: 100%;
+	margin-bottom: 1rem;
 }
 
 .goBack__button {
@@ -571,12 +573,19 @@ footer {
 	font-weight: 300;
 }
 
+.projectDescription__highlight {
+	color: #f9f9f9;
+	font-size: 1.2rem;
+	font-weight: 400;
+}
+
 .btn {
 	background: linear-gradient(-45deg, #ffa63d, #ff3d77, #1593e3, #5918df);
 	background-position-x: 0%;
 	background-position-y: 0%;
 	background-size: auto;
 	background-size: 1100%;
+
 	border: none;
 	border-radius: 50px;
 	color: hsla(0, 0%, 100%, 0.9);
@@ -590,6 +599,11 @@ footer {
 	transform: scaleX(1);
 	transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
 		background-position 3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.btn:hover {
+	background-position-x: 100%;
+	transform: translateY(-4px) scale3d(1.02, 1.02, 1);
 }
 
 .divider-line {
