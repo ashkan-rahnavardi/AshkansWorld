@@ -65,7 +65,7 @@ function Work() {
 		route: '/projects/SotBy',
 	};
 	const wayFinder = {
-		imageUrl: '/wayfinder.png',
+		imageUrl: '/wayfinder/projectCard.png',
 		containerClass: 'wayfinder',
 		bgSize: 'project-image-v',
 		title1: 'Way',
