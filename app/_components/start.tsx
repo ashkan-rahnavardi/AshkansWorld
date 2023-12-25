@@ -40,7 +40,7 @@ function Start() {
 								<span className="whitespace-nowrap">{scrambledText}</span>
 							</h1>
 
-							<p className="text-primaryGray">Let me show You...</p>
+							<p className="text-primaryGray">Let me show you...</p>
 						</div>
 					</div>
 				</div>

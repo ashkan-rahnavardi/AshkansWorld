@@ -7,203 +7,36 @@ export default function PlateGrabber() {
 				<div className="project-info col-sm-12 col-md-8">
 					<div className="project-banner">
 						<Image
-							src="/WayFinderLogo.png"
-							alt="WayFinder-Logo"
+							src="/plategrabber/logo.png"
+							alt="PlateGrabber-Logo"
 							width={300}
 							height={150}
 						></Image>
 					</div>
 
-					<div className="mt-8 font-mono text-base text-primary">
-						<div className="code" data-line-nr="01">
-							<div className="methods">class</div>
-							<span className="propname"> SotBy </span>
-							&#123;
-						</div>
-						<div className="code" data-line-nr="02">
-							<div className="dot">..</div>
-							<div className="comment">
-								&#47;&#47; Resource & Schedule Management App.
-							</div>
-						</div>
-						<div className="code" data-line-nr="03">
-							<div className="dot">..</div>
-							<div className="comment">
-								&#47;&#47; Developed for BCIT&#39;s Automotive Department.
-							</div>
-						</div>
-						<div className="code" data-line-nr="04">
-							<div className="dot">..</div>
-							<div className="methods">constructor</div>
-							&#40;&#41; &#123;
-						</div>
-						<div className="code" data-line-nr="05">
-							<div className="dot">....</div>
-							<span className="scope">this</span>.
-							<span className="prop2">groupProject</span>
-							<span className="scope"> = </span>
-							<span className="boolean">true</span>
-						</div>
-						<div className="code" data-line-nr="06">
-							<div className="dot">....</div>
-							<span className="scope">this</span>.
-							<span className="prop2">teamSize</span>
-							<span className="scope"> = </span>
-							<span className="number">3</span>
-						</div>
-						<div className="code" data-line-nr="07">
-							<div className="dot">....</div>
-							<span className="scope">this</span>.
-							<span className="prop2">totalTime</span>
-							<span className="scope"> = </span>
-							<span className="string">&#39;One Month&#39;</span>
-						</div>
-						<div className="code" data-line-nr="08">
-							<div className="dot">..</div>
-							&#125;
-						</div>
-						<div className="code" data-line-nr="09">
-							<div className="dot">..</div>
-							<span className="propname">overview</span>
-							&#40;&#41; &#123;
-						</div>
-						<div className="code" data-line-nr="10">
-							<div className="dot">....</div>
-							<span className="methods">return </span>
-							&#123;
-						</div>
-						<div className="code" data-line-nr="11">
-							<div className="dot">......</div>
-							<span className="key"> Context </span>
-							&#58;
-							<span className="string">
-								{' '}
-								&#39;BCIT&#39;s Automotive Department were using a shared google
-								file to manage vacations, resources and schedules for the
-								department. This led to a lot of headaches. &#39;
-							</span>
-							,
-						</div>
-						<div className="code" data-line-nr="12">
-							<div className="dot">......</div>
-							<span className="key"> Scope </span>
-							&#58;
-							<span className="string">
-								{' '}
-								&#39;Second team given a four week sprint to develop this
-								application.&#39;
-							</span>
-							,
-						</div>
-						<div className="code" data-line-nr="13">
-							<div className="dot">......</div>
-							<span className="key"> Objective </span>
-							&#58;
-							<span className="string">
-								{' '}
-								&#39;Develop a user friendly Front-End as well as a secure login
-								system.&#39;
-							</span>
-							,
-						</div>
-						<div className="code" data-line-nr="14">
-							<div className="dot">....</div>
-							&#125;
-						</div>
-						<div className="code" data-line-nr="15">
-							<div className="dot">..</div>
-							&#125;
-						</div>
-						<div className="code" data-line-nr="16">
-							<div className="dot">..</div>
-							<span className="propname">techUsed</span>
-							&#40;&#41; &#123;
-						</div>
-						<div className="code" data-line-nr="17">
-							<div className="dot">....</div>
-							<span className="methods">return </span>
-							&#91;
-						</div>
-
-						<div className="code" data-line-nr="18">
-							<div className="dot">......</div>
-							<span className="string"> &#39;PostgreSQL&#39;</span>,
-							<span className="string"> &#39;Express&#39;</span>,
-							<span className="string"> &#39;React&#39;</span>,
-							<span className="string"> &#39;Node.js&#39;</span>,
-							<span className="string"> &#39;Socket.IO&#39;</span>,
-							<span className="string"> &#39;Material UI&#39;</span>,
-							<span className="string"> &#39;JSON Web Tokens&#39;</span>,
-							<span className="string"> &#39;Bcrypt&#39;</span>
-						</div>
-						<div className="code" data-line-nr="19">
-							<div className="dot">....</div>
-							&#93;
-						</div>
-						<div className="code" data-line-nr="20">
-							<div className="dot">..</div>
-							&#125;
-						</div>
-						<div className="code" data-line-nr="21">
-							<div className="dot">..</div>
-							<span className="propname">features</span>
-							&#40;&#41; &#123;
-						</div>
-						<div className="code" data-line-nr="22">
-							<div className="dot">....</div>
-							<span className="methods">return </span>
-							&#91;
-						</div>
-
-						<div className="code" data-line-nr="23">
-							<div className="dot">......</div>
-							<span className="string"> &#39;Secure login system&#39;</span>,
-							<span className="string">
-								{' '}
-								&#39;Simultaneious access for all users&#39;
-							</span>
-							,
-							<span className="string">
-								{' '}
-								&#39;Real-time updates via Socket.IO&#39;
-							</span>
-							,
-							<span className="string">
-								{' '}
-								&#39;Detailed view of each course&#39;
-							</span>
-							,
-							<span className="string">
-								{' '}
-								&#39;Drag and drop to edit schedule&#39;
-							</span>
-							,
-							<span className="string">
-								{' '}
-								&#39;Request resources for classes&#39;
-							</span>
-							,<span className="string"> &#39;Request vacations&#39;</span>,
-							<span className="string">
-								{' '}
-								&#39;Only Admin accounts can approve vacation requests&#39;
-							</span>
-							,
-							<span className="string">
-								{' '}
-								&#39;Admin accounts can edit all users schedules&#39;
-							</span>
-						</div>
-						<div className="code" data-line-nr="24">
-							<div className="dot">....</div>
-							&#93;
-						</div>
-						<div className="code" data-line-nr="25">
-							<div className="dot">..</div>
-							&#125;
-						</div>
-						<div className="code" data-line-nr="26">
-							&#125;
-						</div>
+					<div className="project-banner">
+						<Image
+							src="/plategrabber/form.jpg"
+							alt="PlateGrabber-Form"
+							width={1200}
+							height={2643}
+						></Image>
+					</div>
+					<div className="project-banner">
+						<Image
+							src="/plategrabber/camera.jpg"
+							alt="PlateGrabber-Form"
+							width={1200}
+							height={2643}
+						></Image>
+					</div>
+					<div className="project-banner">
+						<Image
+							src="/plategrabber/saved.jpg"
+							alt="PlateGrabber-Form"
+							width={1200}
+							height={2643}
+						></Image>
 					</div>
 				</div>
 				<div className="bd-sidebar col-sm-12 col-md-4">
@@ -223,24 +56,66 @@ export default function PlateGrabber() {
 							</span>
 						</p>
 						<div className="my-4">
-							<small className="tags">#PostgreSQL, </small>
-							<small className="tags">#Express, </small>
-							<small className="tags">#React, </small>
-							<small className="tags">#Node, </small>
-							<small className="tags">#Material UI, </small>
+							<small className="tags">#Firebase, </small>
+							<small className="tags">#NextJS, </small>
+							<small className="tags">#TailWind, </small>
+							<small className="tags">#Typescript, </small>
+							<small className="tags">#Web App, </small>
+							<small className="tags">#Jest, </small>
 							<small className="tags">#AWS </small>
 						</div>
-						<h2 className="projectTitle-summary">SotBy</h2>
+						<h2 className="projectTitle-summary">Plate Grabber</h2>
 						<div className="projectDescription mb-8">
-							Helped develop a resource and schedule management application for
-							BCIT&#39;s Automotive Department. Features include a secure login
-							system with specialized user permissions, real-time updates via
-							Socket.IO, drag and drop to edit schedule, request resources for
-							classes, request vacations, and more.
+							Solely designed and developed an innovative application for the
+							Traffic Department in the City of Vancouver. This electronic
+							solution serves as a progressive alternative to traditional paper
+							forms, enabling users to effortlessly capture license plate
+							information through photos rather than manual transcription. The
+							application is presently undergoing pilot testing, marking a
+							pivotal step toward its full implementation.
 						</div>
-						<button className="btn">Demo</button>
+						<div className="projectDescription mb-8">
+							<span className="projectDescription__highlight">Features: </span>
+							Text extraction from images, Save and download forms, Autofill
+							date, Geolocation &#40;in development&#41;, Secure login system
+							&#40;in development&#41;
+						</div>
 					</div>
-					<div className="divider-line text-primary">01</div>
+					<div className="flex w-full justify-center mb-8">
+						<button className="btn" disabled>
+							Demo
+						</button>
+					</div>
+					<div>
+						<a
+							className="social-link flex items-end"
+							href="https://github.com/ashkan-rahnavardi"
+							target="_blank"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								version="1.1"
+								width="36px"
+								height="36px"
+								viewBox="0 0 64 64"
+							>
+								<title>Github</title>
+								<desc>A solid styled icon from Orion Icon Library.</desc>
+								<path
+									data-name="layer2"
+									d="M32 0a32.021 32.021 0 0 0-10.1 62.4c1.6.3 2.2-.7 2.2-1.5v-6c-8.9 1.9-10.8-3.8-10.8-3.8-1.5-3.7-3.6-4.7-3.6-4.7-2.9-2 .2-1.9.2-1.9 3.2.2 4.9 3.3 4.9 3.3 2.9 4.9 7.5 3.5 9.3 2.7a6.93 6.93 0 0 1 2-4.3c-7.1-.8-14.6-3.6-14.6-15.8a12.27 12.27 0 0 1 3.3-8.6 11.965 11.965 0 0 1 .3-8.5s2.7-.9 8.8 3.3a30.873 30.873 0 0 1 8-1.1 30.292 30.292 0 0 1 8 1.1c6.1-4.1 8.8-3.3 8.8-3.3a11.965 11.965 0 0 1 .3 8.5 12.1 12.1 0 0 1 3.3 8.6c0 12.3-7.5 15-14.6 15.8a7.746 7.746 0 0 1 2.2 5.9v8.8c0 .9.6 1.8 2.2 1.5A32.021 32.021 0 0 0 32 0z"
+									fill="#5918df"
+								></path>
+								<path
+									data-name="layer1"
+									d="M12.1 45.9c-.1.2-.3.2-.5.1s-.4-.3-.3-.5.3-.2.6-.1c.2.2.3.4.2.5zm1.3 1.5a.589.589 0 0 1-.8-.8.631.631 0 0 1 .7.1.494.494 0 0 1 .1.7zm1.3 1.8a.585.585 0 0 1-.7-.3.6.6 0 0 1 0-.8.585.585 0 0 1 .7.3c.2.3.2.7 0 .8zm1.7 1.8c-.2.2-.5.1-.8-.1-.3-.3-.4-.6-.2-.8a.619.619 0 0 1 .8.1.554.554 0 0 1 .2.8zm2.4 1c-.1.3-.4.4-.8.3s-.6-.4-.5-.7.4-.4.8-.3c.3.2.6.5.5.7zm2.6.2c0 .3-.3.5-.7.5s-.7-.2-.7-.5.3-.5.7-.5c.4.1.7.3.7.5zm2.4-.4q0 .45-.6.6a.691.691 0 0 1-.8-.3q0-.45.6-.6c.5-.1.8.1.8.3z"
+									fill="#5918df"
+								></path>
+							</svg>
+							<span className="ml-2">View on Github</span>
+						</a>
+						<div className="divider-line text-primary mt-4">00</div>
+					</div>
 				</div>
 			</div>
 		</div>

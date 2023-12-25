@@ -47,7 +47,7 @@ function Work() {
 	};
 
 	const plateGrabber = {
-		imageUrl: '/bc-plate2.png',
+		imageUrl: '/plategrabber/projectCard.png',
 		containerClass: 'plate',
 		bgSize: 'project-image-h',
 		title1: 'Plate',

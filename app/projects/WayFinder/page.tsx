@@ -40,18 +40,10 @@ export default function WayFinder() {
 							<span className="pull-right">
 								<a
 									className="text-primaryGray"
-									href="/projects/Plate-Grabber"
+									href="/projects/SotBy"
 									title="Previous"
 								>
 									←
-								</a>
-								<a className="text-primaryGray"> / </a>
-								<a
-									className="text-primaryGray"
-									href="/projects/WayFinder"
-									title="Next"
-								>
-									→
 								</a>
 							</span>
 						</p>
@@ -61,7 +53,9 @@ export default function WayFinder() {
 							<small className="tags">#Google Maps API, </small>
 							<small className="tags">#React, </small>
 							<small className="tags">#Material UI, </small>
-							<small className="tags">#Ngraph </small>
+							<small className="tags">#Ngraph, </small>
+							<small className="tags">#Web App, </small>
+							<small className="tags">#Mobile First </small>
 						</div>
 						<h2 className="projectTitle-summary">WayFinder</h2>
 						<div className="projectDescription mb-8">

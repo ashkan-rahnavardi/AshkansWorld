@@ -636,6 +636,10 @@ footer {
 	z-index: -1;
 }
 
+.color-test {
+	color: #2edfff;
+}
+
 @keyframes blink {
 	0% {
 		opacity: 1;
