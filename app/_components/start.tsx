@@ -37,7 +37,7 @@ function Start() {
 								I <em className="font-serif font-normal">design</em> and{' '}
 								<span className="font-mono font-bold">develop</span>{' '}
 								<br className="newline" />
-								<span className="whitespace-nowrap">{scrambledText}</span>
+								<span className="scramble">{scrambledText}</span>
 							</h1>
 
 							<p className="text-primaryGray">Let me show you...</p>

@@ -111,6 +111,10 @@ body {
 	}
 }
 
+.scramble {
+	white-space: nowrap;
+}
+
 #work::before {
 	color: #221d35;
 	content: 'WEB';
