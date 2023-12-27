@@ -11,7 +11,7 @@ function nextItem<T>(array: Readonly<T[]>, currentItem: T): T {
 	return array[nextIndex];
 }
 
-const symbols = '!<>-_\\/[]{}—=+*^?#'.split('');
+const symbols = '!<>-_/[]{}—=+*^?#'.split('');
 
 interface TextScrambleOptions {
 	letterSpeed?: number;
@@ -26,7 +26,7 @@ const useTextScramble = (
 		letterSpeed = 5,
 		nextLetterSpeed = 100,
 		paused = false,
-		pauseTime = 1500,
+		pauseTime = 3000,
 	}: TextScrambleOptions = {}
 ) => {
 	const [currentText, setCurrentText] = useState<string>(texts[0]);
@@ -44,6 +44,7 @@ const useTextScramble = (
 		const updateSymbols = () => {
 			setScrambledText((scrambledText) =>
 				scrambledText.map((char, index) =>
+					// remainingIndexes.includes(index) ? randomItem(symbols) || '_' : char
 					remainingIndexes.includes(index) ? randomItem(symbols) : char
 				)
 			);
