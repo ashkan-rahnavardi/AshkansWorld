@@ -683,12 +683,17 @@ footer {
 	text-transform: uppercase;
 	transform: scaleX(1);
 	transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-		background-position 3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+		background-position 2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 .btn:hover {
 	background-position-x: 100%;
-	transform: translateY(-4px) scale3d(1.02, 1.02, 1);
+	transform: scale3d(1.2, 1.2, 1);
+}
+
+.btn.disabled:hover {
+	background-position-x: 0%;
+	transform: scaleX(1);
 }
 
 .divider-line {
@@ -719,10 +724,6 @@ footer {
 	width: 90%;
 
 	z-index: -1;
-}
-
-.color-test {
-	color: #2edfff;
 }
 
 @keyframes blink {

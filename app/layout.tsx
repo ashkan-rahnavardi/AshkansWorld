@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import CustomCursorManager from './_components/_cursor/context/manager';
+import CustomCursor from './_components/_cursor/index';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -18,7 +19,10 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={inter.className}>
-				<CustomCursorManager>{children}</CustomCursorManager>
+				<CustomCursorManager>
+					<CustomCursor />
+					{children}
+				</CustomCursorManager>
 			</body>
 		</html>
 	);

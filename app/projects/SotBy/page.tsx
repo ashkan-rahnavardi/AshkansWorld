@@ -117,7 +117,7 @@ export default function SotBy() {
 						</div>
 					</div>
 					<div className="flex w-full justify-center mb-8">
-						<button className="btn" disabled>
+						<button className="btn disabled" disabled>
 							Demo not Available
 						</button>
 					</div>

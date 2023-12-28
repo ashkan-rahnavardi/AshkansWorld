@@ -20,9 +20,11 @@
 }
 
 .secondary-cursor {
+	transition: opacity 1s cubic-bezier(0.77, 0, 0.175, 1);
+	animation: fadeIn 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+	mix-blend-mode: difference;
 	width: 20px;
 	height: 20px;
-	/* transition: width 0.3s, height 0.3s; */
 	transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -37,6 +39,10 @@
 	border-radius: 50%;
 	border: 1px solid #fff;
 	position: relative;
+}
+
+.secondary-cursor.hovering .cursor-background {
+	border: 3px solid #fff;
 }
 
 .cursor-background:after,

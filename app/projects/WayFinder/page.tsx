@@ -75,9 +75,13 @@ export default function WayFinder() {
 						</div>
 					</div>
 					<div className="flex w-full justify-center mb-8">
-						<button className="btn" disabled>
+						<a
+							className="btn"
+							href="https://main.d2n0ewxt6gwakc.amplifyapp.com/"
+							target="_blank"
+						>
 							Demo
-						</button>
+						</a>
 					</div>
 
 					<div>

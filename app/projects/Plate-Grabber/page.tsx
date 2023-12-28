@@ -82,14 +82,18 @@ export default function PlateGrabber() {
 						</div>
 					</div>
 					<div className="flex w-full justify-center mb-8">
-						<button className="btn" disabled>
+						<a
+							className="btn"
+							href="https://main.d2zroxwrh5ormt.amplifyapp.com/"
+							target="_blank"
+						>
 							Demo
-						</button>
+						</a>
 					</div>
 					<div>
 						<a
 							className="social-link flex items-end"
-							href="https://github.com/ashkan-rahnavardi"
+							href="https://github.com/ashkan-rahnavardi/plate-grabber"
 							target="_blank"
 						>
 							<svg

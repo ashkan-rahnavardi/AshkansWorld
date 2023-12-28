@@ -57,7 +57,7 @@ const CustomCursor: React.FC = () => {
 				anchor.removeEventListener('mouseleave', handleAnchorLeave);
 			});
 		};
-	}, [mainCursor, secondaryCursor]);
+	}, [mainCursor, secondaryCursor, cursorWrapper]);
 
 	useEffect(() => {
 		const handleMouseMove = (event: MouseEvent) => {
