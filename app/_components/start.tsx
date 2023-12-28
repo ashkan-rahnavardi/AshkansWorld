@@ -19,7 +19,7 @@ function Start() {
 			if (revealIndex < 2) {
 				setRevealIndex(revealIndex + 1);
 			}
-		}, 800); // 0.8 seconds in milliseconds
+		}, 500); // 0.8 seconds in milliseconds
 
 		// Clear the timer when the component unmounts or when all booleans are set to true
 		return () => {

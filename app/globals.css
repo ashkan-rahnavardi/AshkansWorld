@@ -31,6 +31,12 @@ body {
 	font-family: Roboto Condensed, Lato, Arial, sans-serif !important;
 }
 
+@media (min-width: 768px) {
+	* {
+		cursor: none !important;
+	}
+}
+
 .navbar-item {
 	color: hsla(0, 0%, 100%, 0.5);
 	font-size: 22px;
