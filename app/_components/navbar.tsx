@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
-import Logo from '../../public/ash.png';
 
 const Navbar: React.FC = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,13 +10,17 @@ const Navbar: React.FC = () => {
 		setIsMenuOpen(!isMenuOpen);
 	};
 
+	const closeMenu = () => {
+		setIsMenuOpen(false);
+	};
+
 	return (
 		<nav className="p-4 absolute z-10 bg-transparent w-screen">
 			<div className="mx-auto flex justify-between items-center relative z-10">
 				{/* Logo */}
-				<a href="#">
+				<a href="/" id="logo" className="ml-2">
 					<Image
-						src={Logo}
+						src="/ash.png"
 						alt="Logo"
 						width={170}
 						height={32}
@@ -68,23 +71,30 @@ const Navbar: React.FC = () => {
 					} md:hidden fixed top-16 right-0 left-0 text-center p-4 transition-all duration-300 ease-in-out overflow-hidden navbar-dropdown z-0`}
 				>
 					<a
+						onClick={closeMenu}
 						href="#start"
 						className="block navbar-item hover:text-primary py-2"
 					>
 						Start<span className="text-primaryDark ml-1">/&gt;</span>
 					</a>
-					<a href="#work" className="block navbar-item hover:text-primary py-2">
+					<a
+						href="#work"
+						className="block navbar-item hover:text-primary py-2"
+						onClick={closeMenu}
+					>
 						Work<span className="text-primaryDark ml-1">/&gt;</span>
 					</a>
 					<a
 						href="#about"
 						className="block navbar-item hover:text-primary py-2"
+						onClick={closeMenu}
 					>
 						About<span className="textyDark ml-1">/&gt;</span>
 					</a>
 					<a
 						href="#contact"
 						className="block navbar-item hover:text-primary py-2 mb-4"
+						onClick={closeMenu}
 					>
 						Contact<span className="text-primaryDark ml-1">/&gt;</span>
 					</a>

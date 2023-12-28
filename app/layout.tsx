@@ -19,10 +19,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={inter.className}>
-				<CustomCursorManager>
-					<CustomCursor />
-					{children}
-				</CustomCursorManager>
+				<CustomCursorManager>{children}</CustomCursorManager>
 			</body>
 		</html>
 	);
