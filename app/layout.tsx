@@ -18,6 +18,9 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
+			<head>
+				<title>ASH</title>
+			</head>
 			<body className={inter.className}>
 				<CustomCursorManager>{children}</CustomCursorManager>
 			</body>
