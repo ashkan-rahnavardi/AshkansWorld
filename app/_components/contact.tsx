@@ -121,7 +121,10 @@ function Contact() {
 											strokeLinecap="round"
 										></path>
 									</svg>
-									<span className="ml-2">ashkan.rahnavardi@gmail.com</span>
+
+									<span className="ml-2 word-break">
+										ashkan.rahnavardi@gmail.com
+									</span>
 								</a>
 							</div>
 							<div className="mx-auto copy col-7">

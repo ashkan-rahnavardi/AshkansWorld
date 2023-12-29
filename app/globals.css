@@ -557,6 +557,10 @@ footer {
 	font-size: 1.2rem;
 }
 
+.word-break {
+	word-break: break-word;
+}
+
 .copy {
 	bottom: -120px;
 	color: #988e9f;
@@ -568,7 +572,7 @@ footer {
 
 @media (max-width: 576px) {
 	.copy {
-		bottom: -100px;
+		bottom: -70px;
 	}
 }
 
