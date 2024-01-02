@@ -70,11 +70,11 @@ export default function PlateGrabber() {
 							</div>
 							<h2 className="projectTitle-summary">Plate Grabber</h2>
 							<div className="projectDescription mb-8">
-								Solely designed and developed an innovative application for the
-								Traffic Department in the City of Vancouver. This electronic
-								solution serves as a progressive alternative to traditional
-								paper forms, enabling users to effortlessly capture license
-								plate information through photos rather than manual
+								Independently designed and developed an innovative application
+								for the Traffic Department in the City of Vancouver. This
+								electronic solution serves as a progressive alternative to
+								traditional paper forms, enabling users to effortlessly capture
+								license plate information through photos rather than manual
 								transcription. The application is presently undergoing pilot
 								testing, marking a pivotal step toward its full implementation.
 							</div>
