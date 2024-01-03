@@ -126,8 +126,8 @@ function About() {
 							&#58;
 							<span className="string">
 								{' '}
-								&#39;British Columbia Institute of Technology - Professional
-								Diploma, Computer Systems Technology&#39;{' '}
+								&#39;British Columbia Institute of Technology - Associates
+								Degree, Computer Systems Technology&#39;{' '}
 							</span>
 							&#125;
 						</div>
