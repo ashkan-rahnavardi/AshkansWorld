@@ -97,7 +97,7 @@ export default function SotBy() {
 								<small className="tags">#Express, </small>
 								<small className="tags">#React, </small>
 								<small className="tags">#Node, </small>
-								<small className="tags">#Material UI, </small>
+								<small className="tags">#Bootstrap, </small>
 
 								<small className="tags">#Socket.IO, </small>
 								<small className="tags">#JSON Web Tokens, </small>
