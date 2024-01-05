@@ -71,7 +71,7 @@ function About() {
 						<div className="code" data-line-nr="11">
 							<div className="dot">......</div>
 							&#123;
-							<span className="string"> &#39;2022-now&#39; </span>
+							<span className="string"> &#39;2023-now&#39; </span>
 							&#58;
 							<span className="string">
 								{' '}
