@@ -60,7 +60,7 @@ export default function PlateGrabber() {
 								</span>
 							</p>
 							<div className="my-4">
-								<small className="tags">#Firebase, </small>
+								<small className="tags">#MongoDB, </small>
 								<small className="tags">#NextJS, </small>
 								<small className="tags">#TailWind, </small>
 								<small className="tags">#Typescript, </small>
