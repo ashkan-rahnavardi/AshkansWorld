@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
 	};
 
 	return (
-		<nav className="p-4 absolute z-10 bg-transparent w-screen">
+		<nav className="p-4 absolute z-10 bg-transparent w-full">
 			<div className="mx-auto flex justify-between items-center relative z-10">
 				{/* Logo */}
 				<a href="/" id="logo" className="ml-2">
