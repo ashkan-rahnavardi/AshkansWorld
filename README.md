@@ -18,35 +18,14 @@ This website serves as a digital playground where I experiment with web technolo
 - HTML
 - CSS
 - TypeScript
-- [Next.js]
-- [TailwindCSS]
-
-## Getting Started
-
-If you'd like to run this website locally or contribute to it, follow these steps:
-
-1. Clone this repository to your local machine using `git clone`.
-2. Navigate to the project folder.
-3. Open `index.html` in your web browser to view the website.
-
-## How to Contribute
-
-If you'd like to contribute to my portfolio website or have suggestions for improvements, please follow these steps:
-
-1. Fork this repository.
-2. Create a new branch for your changes: `git checkout -b feature/your-feature-name`.
-3. Make your changes and commit them: `git commit -m 'Add your message here'`.
-4. Push to your branch: `git push origin feature/your-feature-name`.
-5. Create a pull request on GitHub.
-
-I appreciate any contributions or feedback!
-
+- Next.js
+- TailwindCSS
+  
 ## Contact
 
-- Email: [Your Email Address]
-- Portfolio Website: [Link to Your Portfolio Website]
-- LinkedIn: [Your LinkedIn Profile]
-- Twitter: [Your Twitter Handle]
+- Email: [ashkan.rahnavardi@gmail.com](mailto:ashkan.rahnavardi@gmail.com)
+- Portfolio Website: [ashkans.world](https://www.ashkans.world)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ashkan-rahnavardi/)
 
 Feel free to reach out if you have any questions or just want to connect!
 
