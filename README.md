@@ -1,6 +1,6 @@
 # My Portfolio Website
 
-Welcome to the repository of my personal portfolio website! This is where I showcase my skills, projects, and experiences in the world of web development. 
+Welcome to the repository of my [personal website](https://www.ashkans.world)! This is where I showcase my skills, projects, and experiences in the world of web development. 
 
 ## About
 
@@ -24,7 +24,6 @@ This website serves as a digital playground where I experiment with web technolo
 ## Contact
 
 - Email: [ashkan.rahnavardi@gmail.com](mailto:ashkan.rahnavardi@gmail.com)
-- Portfolio Website: [ashkans.world](https://www.ashkans.world)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ashkan-rahnavardi/)
 
 Feel free to reach out if you have any questions or just want to connect!
