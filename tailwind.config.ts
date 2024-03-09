@@ -19,6 +19,8 @@ const config: Config = {
 				primaryGray: '#989e9f',
 				purple: '#5918df',
 				darkPurple: '#14121c',
+				customPink: '#cc2b5e ',
+				customPurple: '#753a88',
 			},
 			backgroundImage: {
 				'start-page': "url('/background4.jpg')",

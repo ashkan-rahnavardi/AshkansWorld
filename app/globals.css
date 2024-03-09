@@ -33,6 +33,10 @@ body {
 	small {
 		@apply text-lg font-light;
 	}
+
+	#blog p {
+		@apply text-xl font-normal;
+	}
 }
 
 @media (min-width: 768px) {
@@ -758,6 +762,27 @@ footer {
 	100% {
 		opacity: 1;
 	}
+}
+
+/* #blog {
+	background-color: #14121c;
+	height: auto;
+	overflow: hidden;
+	position: relative;
+} */
+
+#blog {
+	background-image: radial-gradient(
+			circle at center,
+			rgba(255, 255, 255, 0.005) 0,
+			rgba(255, 255, 255, 0.005) 1px,
+			transparent 1px
+		),
+		linear-gradient(to right, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+		linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+	background-size: 10px 10px; /* size of the grid */
+	background-attachment: fixed;
+	background-color: #14121c;
 }
 
 @keyframes fadeinRight {
