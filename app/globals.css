@@ -783,6 +783,14 @@ footer {
 	background-size: 10px 10px; /* size of the grid */
 	background-attachment: fixed;
 	background-color: #14121c;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	min-height: 100vh;
+}
+
+#blog p {
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 @keyframes fadeinRight {
