@@ -15,6 +15,7 @@ export default function ThePrelude() {
 						<h1>Road To The Ultimate System</h1>
 						<h1>- The Prelude -</h1>
 					</span>
+
 					<br />
 					<p>
 						An overarching theme I want to promote throughout this series and
@@ -26,7 +27,6 @@ export default function ThePrelude() {
 						system, and the things I learn along the way, so it can hopefully
 						help out someone else on a similar path.
 					</p>
-
 					<p>
 						Having said that, it&#39;s time to cut the fat. If you heavily
 						depend on proprietary software for your work flow like Adobe
@@ -39,7 +39,6 @@ export default function ThePrelude() {
 						</strong>
 						✨.
 					</p>
-
 					<p>
 						<em className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">
 							Note: If you&#39;re okay with using open source alternatives, like{' '}
@@ -53,7 +52,6 @@ export default function ThePrelude() {
 					<h2 className=" block text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-cyan-500">
 						Why Linux?
 					</h2>
-
 					<p>
 						As a student of Socrates, Plato wrote &#39;The Republic&#39;
 						sometime around ~375 BC. Little did he know that, 2400 years later
@@ -67,7 +65,6 @@ export default function ThePrelude() {
 						contribution, and open source nature. It&#39;s safe to say if Plato
 						was alive today he&#39;d be using Linux.
 					</p>
-
 					<p>
 						I&#39;m not done with the Plato references yet, in fact I&#39;ve
 						barely scratched the surface... &#39;Allegory of the cave&#39;,
@@ -80,7 +77,6 @@ export default function ThePrelude() {
 						updates, a broken registry system, and unstable garbage layered on
 						garbage which is itching to fall apart.
 					</p>
-
 					<p>
 						When a prisoner is finally free&#39;d and allowed to see the true
 						reality of the outside world, an open computing environment where
@@ -96,7 +92,6 @@ export default function ThePrelude() {
 						or you can move towards the light and join me on a journey towards
 						enlightenment.
 					</p>
-
 					<div className="my-4">
 						<Image
 							src="/blog/platos-cave.png"
