@@ -1,24 +1,24 @@
-'use client';
+"use client";
 
-import React, { ReactNode, useState } from 'react';
+import React, { ReactNode, useState } from "react";
 import CustomCursorContext, {
-	CursorLookType,
-} from '../context/CustomCursorContext';
+  CursorLookType,
+} from "../context/CustomCursorContext";
 
 interface CustomCursorManagerProps {
-	children: ReactNode;
+  children: ReactNode;
 }
 
 const CustomCursorManager: React.FC<CustomCursorManagerProps> = ({
-	children,
+  children,
 }) => {
-	const [type, setType] = useState<CursorLookType>('default');
+  const [type, setType] = useState<CursorLookType>("default");
 
-	return (
-		<CustomCursorContext.Provider value={{ type, setType }}>
-			{children}
-		</CustomCursorContext.Provider>
-	);
+  return (
+    <CustomCursorContext.Provider value={{ type, setType }}>
+      {children}
+    </CustomCursorContext.Provider>
+  );
 };
 
 export default CustomCursorManager;
