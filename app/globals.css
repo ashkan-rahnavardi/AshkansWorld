@@ -33,6 +33,11 @@ body {
   h3 {
     @apply text-2xl font-bold;
   }
+  h4 {
+    @apply text-[#988e9f] text-[30px] font-bold leading-[1.2];
+
+    /* font-family: "Roboto Condensed", Lato, Arial, sans-serif !important; */
+  }
   p {
     @apply text-2xl font-normal;
   }
@@ -50,6 +55,7 @@ body {
     cursor: none !important;
   }
 }
+
 
 .navbar-item {
   color: hsla(0, 0%, 100%, 0.5);
@@ -288,6 +294,16 @@ body {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 2);
 }
 
+.project-image-h2 {
+  width: 383px;
+  height: 224px;
+
+  @media (max-width: 768px) {
+    width: 200px;
+    height: 99px;
+  }
+}
+
 .project-image-h {
   width: 455px;
   height: 224px;
@@ -310,7 +326,37 @@ body {
 
 .project-image-h:hover,
 .project-image-v:hover {
-  box-shadow: 4px 21px 44px -13px rgba(0, 0, 0, 0.75);
+  /* box-shadow: 4px 21px 44px -13px rgba(0, 0, 0, 0.75); */
+}
+
+.rtb {
+  width: 455px;
+  height: 293px;
+  margin-top: 0px;
+  margin-left: 100px;
+
+  @media (max-width: 768px) {
+    width: 200px;
+    height: 117px;
+    margin-top: 0px;
+    margin-left: 125px;
+    margin-top: 50px;
+  }
+}
+
+.overhorizon {
+  width: 455px;
+  height: 293px;
+  margin-top: 0px;
+  margin-left: 100px;
+
+  @media (max-width: 768px) {
+    width: 200px;
+    height: 117px;
+    margin-top: 0px;
+    margin-left: 125px;
+    margin-top: 50px;
+  }
 }
 
 .plate {
