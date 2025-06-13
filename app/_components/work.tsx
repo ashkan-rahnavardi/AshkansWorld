@@ -12,6 +12,7 @@ const professionalProjects: Project[] = [
     num: "00",
     route: "/projects/Plate-Grabber",
     classes: "col-sm-10 col-md-5",
+    dataCycleCount: "5",
   },
   {
     imageUrl: "/rtb/projectCard2.png",
@@ -22,6 +23,7 @@ const professionalProjects: Project[] = [
     num: "01",
     route: "/projects/SotBy",
     classes: "col-sm-10 col-md-4",
+    dataCycleCount: "4",
   },
 ];
 
@@ -35,6 +37,7 @@ const personalProjects: Project[] = [
     num: "00",
     route: "/projects/Plate-Grabber",
     classes: "col-sm-10 col-md-5",
+    dataCycleCount: "3",
   },
   {
     imageUrl: "/sotby/projectCard.png",
@@ -45,6 +48,7 @@ const personalProjects: Project[] = [
     num: "01",
     route: "/projects/SotBy",
     classes: "col-sm-10 col-md-4",
+    dataCycleCount: "1",
   },
   {
     imageUrl: "/wayfinder/projectCard.png",
@@ -55,6 +59,7 @@ const personalProjects: Project[] = [
     num: "02",
     route: "/projects/WayFinder",
     classes: "col-sm-10 col-md-3",
+    dataCycleCount: "2",
   },
 ];
 

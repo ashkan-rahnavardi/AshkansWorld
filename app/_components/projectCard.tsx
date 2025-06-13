@@ -10,14 +10,23 @@ export interface Project {
   num: string;
   route: string;
   classes: string;
+  dataCycleCount: string;
 }
 
 export function ProjectCard({ project }: { project: Project }) {
-  const { imageUrl, containerClass, bgSize, title1, title2, num, route } =
-    project;
+  const {
+    imageUrl,
+    containerClass,
+    bgSize,
+    title1,
+    title2,
+    num,
+    route,
+    dataCycleCount,
+  } = project;
 
   return (
-    <Link className={containerClass} href={route}>
+    <Link className={containerClass} href={route} data-cycle-count={dataCycleCount}>
       <Tilt
         perspective={500}
         glareEnable={false}
