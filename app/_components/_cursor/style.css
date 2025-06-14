@@ -51,11 +51,11 @@
   /* animation: fadeIn 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards; */
   /* mix-blend-mode: difference; */
   /* transition: all 5s cubic-bezier(0.165, 0.84, 0.44, 1); */
-  width: 15px;
-  height: 15px;
-  transition:
-    width 0.3s ease-in-out,
-    height 0.3s ease-in-out;
+  /* width: 15px; */
+  /* height: 15px; */
+  /* transition: */
+  /*   width 0.3s ease-in-out, */
+  /*   height 0.3s ease-in-out; */
 }
 
 .main-cursor.hovering + .secondary-cursor {
