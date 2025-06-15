@@ -46,22 +46,22 @@
   display: block;
 }
 
-.secondary-cursor {
-  /* transition: opacity 1s cubic-bezier(0.77, 0, 0.175, 1); */
-  /* animation: fadeIn 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards; */
-  /* mix-blend-mode: difference; */
-  /* transition: all 5s cubic-bezier(0.165, 0.84, 0.44, 1); */
-  /* width: 15px; */
-  /* height: 15px; */
-  /* transition: */
-  /*   width 0.3s ease-in-out, */
-  /*   height 0.3s ease-in-out; */
-}
+/* .secondary-cursor { */
+/*   transition: opacity 1s cubic-bezier(0.77, 0, 0.175, 1); */
+/*   animation: fadeIn 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards; */
+/*   mix-blend-mode: difference; */
+/*   transition: all 5s cubic-bezier(0.165, 0.84, 0.44, 1); */
+/*   width: 15px; */
+/*   height: 15px; */
+/*   transition: */
+/*     width 0.3s ease-in-out, */
+/*     height 0.3s ease-in-out; */
+/* } */
 
-.main-cursor.hovering + .secondary-cursor {
-  width: 33px;
-  height: 33px;
-}
+/* .main-cursor.hovering + .secondary-cursor { */
+/*   width: 33px; */
+/*   height: 33px; */
+/* } */
 
 /* .cursor-background { */
 /*   width: 100%; */
@@ -176,45 +176,45 @@
   }
 }
 
-@keyframes scaleUp {
-  from {
-    transform: scale(1);
-  }
-
-  to {
-    transform: scale(1.5);
-  }
-}
-
-@keyframes scaleDown {
-  from {
-    transform: scale(1.5);
-  }
-
-  to {
-    transform: scale(1);
-  }
-}
-
-@keyframes translateLeftDot {
-  from {
-    transform: translate(20px, -50%);
-  }
-
-  to {
-    transform: translate(0px, -50%);
-  }
-}
-
-@keyframes translateRightDot {
-  from {
-    transform: translate(-20px, -50%);
-  }
-
-  to {
-    transform: translate(0px, -50%);
-  }
-}
+/* @keyframes scaleUp { */
+/*   from { */
+/*     transform: scale(1); */
+/*   } */
+/**/
+/*   to { */
+/*     transform: scale(1.5); */
+/*   } */
+/* } */
+/**/
+/* @keyframes scaleDown { */
+/*   from { */
+/*     transform: scale(1.5); */
+/*   } */
+/**/
+/*   to { */
+/*     transform: scale(1); */
+/*   } */
+/* } */
+/**/
+/* @keyframes translateLeftDot { */
+/*   from { */
+/*     transform: translate(20px, -50%); */
+/*   } */
+/**/
+/*   to { */
+/*     transform: translate(0px, -50%); */
+/*   } */
+/* } */
+/**/
+/* @keyframes translateRightDot { */
+/*   from { */
+/*     transform: translate(-20px, -50%); */
+/*   } */
+/**/
+/*   to { */
+/*     transform: translate(0px, -50%); */
+/*   } */
+/* } */
 
 /* at the bottom of your style.css */
 
