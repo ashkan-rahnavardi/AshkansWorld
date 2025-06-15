@@ -26,8 +26,13 @@ export function ProjectCard({ project }: { project: Project }) {
   } = project;
 
   return (
-    <Link className={containerClass} href={route} data-cycle-count={dataCycleCount}>
+    <Link
+      className={containerClass}
+      href={route}
+      data-cycle-count={dataCycleCount}
+    >
       <Tilt
+        tiltReverse={true}
         perspective={500}
         glareEnable={false}
         glareMaxOpacity={0.45}
