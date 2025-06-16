@@ -181,7 +181,7 @@ function About() {
                 {" "}
                 &#39;TypeScript/JavaScript (ES6+)&#39;
               </span>
-              ,<span className="string"> &#39;PHP&#39;</span>, ,
+              ,<span className="string"> &#39;PHP&#39;</span>,
               <span className="string"> &#39;Python&#39;</span>,
               <span className="string"> &#39;HTML5&#39;</span>,
               <span className="string"> &#39;CSS3/Sass&#39;</span>,
@@ -195,10 +195,10 @@ function About() {
               &#58; &#91;
               <span className="string"> &#39;React&#39;</span>,
               <span className="string"> &#39;Next.js&#39;</span>,
-              <span className="string"> &#39;Node.js&#39;</span>
-              <span className="string"> &#39;WordPresss&#39;</span>
-              <span className="string"> &#39;WooCommerce&#39;</span>
-              <span className="string"> &#39;Konva.js&#39;</span>
+              <span className="string"> &#39;Node.js&#39;</span>,
+              <span className="string"> &#39;WordPresss&#39;</span>,
+              <span className="string"> &#39;WooCommerce&#39;</span>,
+              <span className="string"> &#39;Konva.js&#39;</span>,
               <span className="string"> &#39;Express&#39;</span>
               &#93;,
             </div>
@@ -221,12 +221,13 @@ function About() {
                 {" "}
                 &#39;AWS(EC2, S3, Route 53, IAM)&#39;
               </span>
+              ,
               <span className="string">
                 {" "}
                 &#39;Docker &#38; Docker Compose&#39;
               </span>
-              ,<span className="string"> &#39;Github Actions CI/CD&#39;</span>,
-              ,<span className="string"> &#39;Linux (NixOS/Arch)&#39;</span>,
+              , <span className="string"> &#39;Github Actions CI/CD&#39;</span>,{" "}
+              <span className="string"> &#39;Linux (NixOS/Arch)&#39;</span>,
               <span className="string"> &#39;SSL/TLS&#39;</span>&#93;,
             </div>
             <div className="code" data-line-nr="29">
