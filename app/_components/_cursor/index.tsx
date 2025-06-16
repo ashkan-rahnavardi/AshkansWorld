@@ -32,45 +32,39 @@ function createOscillatingSvgAnimator(
   initialOptions: OscillatorOptions = {},
   onFinish?: () => void,
 ): AnimatorHandle {
-  // Current and target states
+  // ------------------------------------------------------------------
+  //  State
+  // ------------------------------------------------------------------
   let phase = 0;
   let rot = 0;
   let running = true;
   let reversing = false;
   let finished = false;
-  let lastTime = Date.now();
+  let lastTime = performance.now(); // use high-res timer
 
   let currAmp = 0;
-  let currPhaseSpeed = 0;
+  let currPhaseSpeed = 0; // *radians per second*
   let currCycleCount = initialOptions.cycleCount ?? 3;
   let currBaseR = initialOptions.baseR ?? 10;
-  let currRotationSpeed = initialOptions.rotationSpeed ?? 0.02;
+  let currRotationSpeed = initialOptions.rotationSpeed ?? 0.02; // *rad ⁄ s*
   let currRampDuration = initialOptions.rampDuration ?? 5000;
   let currResolution = initialOptions.resolution ?? 120;
 
   let targetAmp = initialOptions.amplitudePct ?? 8;
-  let targetPhaseSpeed = initialOptions.phaseSpeed ?? 0.05;
+  let targetPhaseSpeed = initialOptions.phaseSpeed ?? 0.05; // *rad ⁄ s*
   let targetCycleCount = currCycleCount;
-  // let targetBaseR = currBaseR;
-  let targetBaseR = 10;
+  let targetBaseR = 8;
+  // let targetBaseR = 10;
   let targetRotationSpeed = currRotationSpeed;
   let targetRampDuration = currRampDuration;
   let targetResolution = currResolution;
 
-  // Interpolation
+  // ------------------------------------------------------------------
+  //  Helpers
+  // ------------------------------------------------------------------
   const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
 
-  let ampT = 1,
-    speedT = 1,
-    cycleT = 1,
-    baseRT = 1,
-    rotSpeedT = 1,
-    rampT = 1,
-    resT = 1;
-
-  // For smooth transitions
   function setOptions(opts: OscillatorOptions) {
-    // Set new targets
     if (opts.amplitudePct !== undefined) targetAmp = opts.amplitudePct;
     if (opts.phaseSpeed !== undefined) targetPhaseSpeed = opts.phaseSpeed;
     if (opts.cycleCount !== undefined) targetCycleCount = opts.cycleCount;
@@ -85,53 +79,50 @@ function createOscillatingSvgAnimator(
 
   function reverse() {
     reversing = true;
-    targetBaseR = 10;
+    targetBaseR = 8;
+    // targetBaseR = 10;
   }
 
-  // Animation step
+  // ------------------------------------------------------------------
+  //  Animation step (TIME-BASED)
+  // ------------------------------------------------------------------
+  // const BLEND_RATE = 1.5; // 1 · s⁻¹ → matches old 0.025 per-frame at ~60 fps
+  const BLEND_RATE = 5; // 1 · s⁻¹ → matches old 0.025 per-frame at ~60 fps
   let rafId: number;
+
   function step() {
-    const now = Date.now();
-    const dt = Math.max(1, now - lastTime) / 1000;
+    const now = performance.now();
+    const dt = Math.max(0.001, (now - lastTime) / 1000); // seconds
     lastTime = now;
 
-    // Interpolate all values for smooth transition
-    const interpSpeed = 0.025; // Lower = slower blend
-    currAmp = lerp(currAmp, reversing ? 0 : targetAmp, interpSpeed);
-    currPhaseSpeed = lerp(
-      currPhaseSpeed,
-      reversing ? 0 : targetPhaseSpeed,
-      interpSpeed,
-    );
-    currCycleCount = lerp(currCycleCount, targetCycleCount, interpSpeed);
-    currBaseR = lerp(currBaseR, targetBaseR, interpSpeed);
-    currRotationSpeed = lerp(
-      currRotationSpeed,
-      targetRotationSpeed,
-      interpSpeed,
-    );
-    currRampDuration = lerp(currRampDuration, targetRampDuration, interpSpeed);
-    currResolution = Math.round(
-      lerp(currResolution, targetResolution, interpSpeed),
-    );
+    // Smoothly approach targets ─ time-based blend
+    const t = Math.min(1, BLEND_RATE * dt);
+    currAmp = lerp(currAmp, reversing ? 0 : targetAmp, t);
+    currPhaseSpeed = lerp(currPhaseSpeed, reversing ? 0 : targetPhaseSpeed, t);
+    currCycleCount = lerp(currCycleCount, targetCycleCount, t);
+    currBaseR = lerp(currBaseR, targetBaseR, t);
+    currRotationSpeed = lerp(currRotationSpeed, targetRotationSpeed, t);
+    currRampDuration = lerp(currRampDuration, targetRampDuration, t);
+    currResolution = Math.round(lerp(currResolution, targetResolution, t));
 
-    phase += currPhaseSpeed;
-    rot += currRotationSpeed;
+    // Advance oscillators ─ **time-scaled**
+    phase += currPhaseSpeed * dt;
+    rot += currRotationSpeed * dt;
 
-    // Envelope is always on, but amplitude/speed fade with currAmp/currPhaseSpeed
+    // Build polygon path
     const env = Math.sin(phase);
     const pts: string[] = [];
     for (let i = 0; i < currResolution; i++) {
       const θ0 = (2 * Math.PI * i) / currResolution;
       const r = currBaseR + currAmp * env * Math.sin(currCycleCount * θ0);
       const θ = θ0 + rot;
-      pts.push(`${10 + Math.cos(θ) * r},${10 + Math.sin(θ) * r}`);
+      // pts.push(`${10 + Math.cos(θ) * r},${10 + Math.sin(θ) * r}`);
+      pts.push(`${8 + Math.cos(θ) * r},${8 + Math.sin(θ) * r}`);
     }
     polygon.setAttribute("points", pts.join(" "));
 
-    // When reversed, stop once amp and speed have faded out
-    const FINISH_THRESHOLD = 0.1; // Try 0.05 to 0.1
-
+    // Finish check when reversing
+    const FINISH_THRESHOLD = 0.1;
     if (
       reversing &&
       currAmp < FINISH_THRESHOLD &&
@@ -149,11 +140,136 @@ function createOscillatingSvgAnimator(
 
   rafId = requestAnimationFrame(step);
 
-  return {
-    setOptions,
-    reverse,
-  };
+  return { setOptions, reverse };
 }
+
+// function createOscillatingSvgAnimator(
+//   polygon: SVGPolygonElement,
+//   initialOptions: OscillatorOptions = {},
+//   onFinish?: () => void,
+// ): AnimatorHandle {
+//   // Current and target states
+//   let phase = 0;
+//   let rot = 0;
+//   let running = true;
+//   let reversing = false;
+//   let finished = false;
+//   let lastTime = Date.now();
+//
+//   let currAmp = 0;
+//   let currPhaseSpeed = 0;
+//   let currCycleCount = initialOptions.cycleCount ?? 3;
+//   let currBaseR = initialOptions.baseR ?? 10;
+//   let currRotationSpeed = initialOptions.rotationSpeed ?? 0.02;
+//   let currRampDuration = initialOptions.rampDuration ?? 5000;
+//   let currResolution = initialOptions.resolution ?? 120;
+//
+//   let targetAmp = initialOptions.amplitudePct ?? 8;
+//   let targetPhaseSpeed = initialOptions.phaseSpeed ?? 0.05;
+//   let targetCycleCount = currCycleCount;
+//   // let targetBaseR = currBaseR;
+//   let targetBaseR = 10;
+//   let targetRotationSpeed = currRotationSpeed;
+//   let targetRampDuration = currRampDuration;
+//   let targetResolution = currResolution;
+//
+//   // Interpolation
+//   const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
+//
+//   let ampT = 1,
+//     speedT = 1,
+//     cycleT = 1,
+//     baseRT = 1,
+//     rotSpeedT = 1,
+//     rampT = 1,
+//     resT = 1;
+//
+//   // For smooth transitions
+//   function setOptions(opts: OscillatorOptions) {
+//     // Set new targets
+//     if (opts.amplitudePct !== undefined) targetAmp = opts.amplitudePct;
+//     if (opts.phaseSpeed !== undefined) targetPhaseSpeed = opts.phaseSpeed;
+//     if (opts.cycleCount !== undefined) targetCycleCount = opts.cycleCount;
+//     if (opts.baseR !== undefined) targetBaseR = opts.baseR;
+//     if (opts.rotationSpeed !== undefined)
+//       targetRotationSpeed = opts.rotationSpeed;
+//     if (opts.rampDuration !== undefined) targetRampDuration = opts.rampDuration;
+//     if (opts.resolution !== undefined) targetResolution = opts.resolution;
+//     reversing = false;
+//     finished = false;
+//   }
+//
+//   function reverse() {
+//     reversing = true;
+//     targetBaseR = 10;
+//   }
+//
+//   // Animation step
+//   let rafId: number;
+//   function step() {
+//     const now = Date.now();
+//     const dt = Math.max(1, now - lastTime) / 1000;
+//     lastTime = now;
+//
+//     // Interpolate all values for smooth transition
+//     const interpSpeed = 0.025; // Lower = slower blend
+//     currAmp = lerp(currAmp, reversing ? 0 : targetAmp, interpSpeed);
+//     currPhaseSpeed = lerp(
+//       currPhaseSpeed,
+//       reversing ? 0 : targetPhaseSpeed,
+//       interpSpeed,
+//     );
+//     currCycleCount = lerp(currCycleCount, targetCycleCount, interpSpeed);
+//     currBaseR = lerp(currBaseR, targetBaseR, interpSpeed);
+//     currRotationSpeed = lerp(
+//       currRotationSpeed,
+//       targetRotationSpeed,
+//       interpSpeed,
+//     );
+//     currRampDuration = lerp(currRampDuration, targetRampDuration, interpSpeed);
+//     currResolution = Math.round(
+//       lerp(currResolution, targetResolution, interpSpeed),
+//     );
+//
+//     phase += currPhaseSpeed;
+//     rot += currRotationSpeed;
+//
+//     // Envelope is always on, but amplitude/speed fade with currAmp/currPhaseSpeed
+//     const env = Math.sin(phase);
+//     const pts: string[] = [];
+//     for (let i = 0; i < currResolution; i++) {
+//       const θ0 = (2 * Math.PI * i) / currResolution;
+//       const r = currBaseR + currAmp * env * Math.sin(currCycleCount * θ0);
+//       const θ = θ0 + rot;
+//       pts.push(`${10 + Math.cos(θ) * r},${10 + Math.sin(θ) * r}`);
+//     }
+//     polygon.setAttribute("points", pts.join(" "));
+//
+//     // When reversed, stop once amp and speed have faded out
+//     const FINISH_THRESHOLD = 0.1; // Try 0.05 to 0.1
+//
+//     if (
+//       reversing &&
+//       currAmp < FINISH_THRESHOLD &&
+//       currPhaseSpeed < FINISH_THRESHOLD
+//     ) {
+//       polygon.setAttribute("points", "");
+//       running = false;
+//       finished = true;
+//       onFinish?.();
+//       return;
+//     }
+//
+//     rafId = requestAnimationFrame(step);
+//   }
+//
+//   rafId = requestAnimationFrame(step);
+//
+//   return {
+//     setOptions,
+//     reverse,
+//   };
+// }
 
 /* ------------------------------------------------------------------ */
 /*  Custom cursor component                                           */
@@ -194,13 +310,13 @@ function CustomCursor(): JSX.Element {
                 (e.currentTarget as HTMLElement).dataset.cycleCount ?? "1",
                 10,
               ),
-              amplitudePct: 10,
+              amplitudePct: 8,
               // phaseSpeed: 0.075,
-              phaseSpeed: 0.1,
-              baseR: 10,
+              phaseSpeed: 1.4,
+              baseR: 8,
               resolution: 1000,
               rampDuration: 2500,
-              rotationSpeed: 0.1,
+              rotationSpeed: 2.5,
             },
             () => {
               animatorRef.current = null;
@@ -214,13 +330,13 @@ function CustomCursor(): JSX.Element {
               (e.currentTarget as HTMLElement).dataset.cycleCount ?? "1",
               10,
             ),
-            amplitudePct: 10,
+            amplitudePct: 8,
             // phaseSpeed: 0.075,
-            phaseSpeed: 0.1,
-            baseR: 10,
+            phaseSpeed: 1.4,
+            baseR: 8,
             resolution: 1000,
             rampDuration: 2500,
-            rotationSpeed: 0.1,
+            rotationSpeed: 2.5,
           });
         }
       }
@@ -293,11 +409,11 @@ function CustomCursor(): JSX.Element {
 
       <div className="secondary-cursor" ref={secondary}>
         <svg
-          viewBox="0 0 20 20"
+          viewBox="0 0 16 16"
           preserveAspectRatio="none"
           style={{
-            width: "20",
-            height: "20",
+            width: "16",
+            height: "16",
             // width: "100%",
             // height: "100%",
             mixBlendMode: "difference",
@@ -305,9 +421,9 @@ function CustomCursor(): JSX.Element {
           }}
         >
           <circle
-            cx="10"
-            cy="10"
-            r="10"
+            cx="8"
+            cy="8"
+            r="8"
             fill="none"
             stroke="#fff"
             style={{ strokeWidth: "1px", vectorEffect: "non-scaling-stroke" }}
