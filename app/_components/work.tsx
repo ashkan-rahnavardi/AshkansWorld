@@ -22,7 +22,7 @@ const professionalProjects: Project[] = [
     title2: "",
     num: "01",
     route: "/projects/SotBy",
-    classes: "col-sm-10 col-md-4",
+    classes: "col-sm-10 col-md-4 mt-20",
     dataCycleCount: "4",
   },
 ];
@@ -65,12 +65,12 @@ const personalProjects: Project[] = [
 
 export default function Work() {
   return (
-    <div id="work" className="w-screen relative container-fluid pb-10">
+    <div id="projects" className="w-screen relative container-fluid pb-10">
       <div className="row w-full self-top items-start justify-center">
         <div className="mx-auto pt-0 col-sm-7 col-md-7 col-9">
           <div className="timeline alt"></div>
           <small className="section-title bullet-title alt">
-            Work<span className="ml-1">/&gt;</span>
+            Projects<span className="ml-1">/&gt;</span>
           </small>
 
           <div className="text-primaryGray">

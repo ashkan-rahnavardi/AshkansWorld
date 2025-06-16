@@ -33,8 +33,8 @@ const Navbar: React.FC = () => {
           <a href="#start" className="navbar-item hover:text-primary">
             Start<span className="text-primaryDark ml-1">/&gt;</span>
           </a>
-          <a href="#work" className="navbar-item hover:text-primary">
-            Work<span className="text-primaryDark ml-1">/&gt;</span>
+          <a href="#projects" className="navbar-item hover:text-primary">
+            Projects<span className="text-primaryDark ml-1">/&gt;</span>
           </a>
           <a href="#about" className="navbar-item hover:text-primary">
             About<span className="textyDark ml-1">/&gt;</span>
@@ -78,11 +78,11 @@ const Navbar: React.FC = () => {
             Start<span className="text-primaryDark ml-1">/&gt;</span>
           </a>
           <a
-            href="#work"
+            href="#projects"
             className="block navbar-item hover:text-primary py-2"
             onClick={closeMenu}
           >
-            Work<span className="text-primaryDark ml-1">/&gt;</span>
+            Projects<span className="text-primaryDark ml-1">/&gt;</span>
           </a>
           <a
             href="#about"
