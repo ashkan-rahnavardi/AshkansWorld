@@ -1,251 +1,125 @@
+/* ------------------------------------------------------------------
+   Variables
+------------------------------------------------------------------ */
+
+:root {
+  --cursor-z: 10000;
+  --blend-color: #fff;
+  --fade-duration: 1s;
+  --scale-duration: 1s;
+  --easing: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* ------------------------------------------------------------------
+   Shared cursor foundations
+------------------------------------------------------------------ */
+
 .main-cursor,
 .secondary-cursor {
-  z-index: 10000;
+  position: fixed;
+  z-index: var(--cursor-z);
   pointer-events: none;
   transform: translate3d(0, 0, 0);
-  position: fixed;
 }
+
+/* ------------------------------------------------------------------
+   Main cursor (dot)
+------------------------------------------------------------------ */
+
 .main-cursor {
-  transition: opacity 1s cubic-bezier(0.77, 0, 0.175, 1);
-  animation: fadeIn 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
   mix-blend-mode: difference;
+  transition: opacity var(--fade-duration) var(--easing);
+  animation: fadeIn var(--fade-duration) var(--easing) forwards;
 }
 
 .main-cursor-background {
   width: 6px;
   height: 6px;
-  background: white;
+  background: var(--blend-color);
   border-radius: 50%;
 }
 
+/* ------------------------------------------------------------------
+   Secondary cursor (follower outline)
+------------------------------------------------------------------ */
+
+.secondary-cursor {
+  isolation: isolate;          /* create new stacking context            */
+  mix-blend-mode: difference;  /* invert underlying colours for contrast */
+}
+
 .secondary-cursor svg,
+.secondary-cursor svg circle,
 .secondary-cursor svg polygon {
-  /* Invert whatever color is below, guaranteeing contrast: */
-  mix-blend-mode: difference;
-  /* Make sure the stroke is white so inversion works predictably: */
-  stroke: #fff;
-  /* Keep a non-scaling 1px stroke: */
+  overflow: visible;
+  stroke: var(--blend-color);
   stroke-width: 1px;
   vector-effect: non-scaling-stroke;
   fill: none;
 }
 
-.secondary-cursor svg {
-  overflow: visible;
-}
-.secondary-cursor svg circle {
-  display: block;
-}
-.secondary-cursor svg polygon {
-  display: none;
-}
-.secondary-cursor.hovering svg circle {
-  display: none;
-}
-.secondary-cursor.hovering svg polygon {
-  display: block;
-}
+/* show / hide outline vs. dot */
+.secondary-cursor svg circle { display: block; }
+.secondary-cursor svg polygon,
+.secondary-cursor.hovering svg circle { display: none; }
+.secondary-cursor.hovering svg polygon { display: block; }
 
-/* .secondary-cursor { */
-/*   transition: opacity 1s cubic-bezier(0.77, 0, 0.175, 1); */
-/*   animation: fadeIn 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards; */
-/*   mix-blend-mode: difference; */
-/*   transition: all 5s cubic-bezier(0.165, 0.84, 0.44, 1); */
-/*   width: 15px; */
-/*   height: 15px; */
-/*   transition: */
-/*     width 0.3s ease-in-out, */
-/*     height 0.3s ease-in-out; */
-/* } */
 
-/* .main-cursor.hovering + .secondary-cursor { */
-/*   width: 33px; */
-/*   height: 33px; */
-/* } */
+/* ------------------------------------------------------------------
+   Variant states
+------------------------------------------------------------------ */
 
-/* .cursor-background { */
-/*   width: 100%; */
-/*   height: 100%; */
-/*   border-radius: 50%; */
-/*   border: 1px solid #fff; */
-/*   position: relative; */
-/* } */
-/**/
-/* .secondary-cursor.hovering .cursor-background { */
-/*   border: 3px solid #fff; */
-/* } */
-
-/* .cursor-background:after, */
-/* .cursor-background:before { */
-/*   content: ""; */
-/*   width: 3px; */
-/*   height: 3px; */
-/*   border-radius: 50%; */
-/*   background: white; */
-/*   display: block; */
-/*   position: absolute; */
-/*   top: 50%; */
-/*   transform: translateY(-50%); */
-/*   animation: fadeOut 0.75s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards; */
-/* } */
-/**/
-/* .cursor-background:before { */
-/*   left: 10px; */
-/* } */
-/**/
-/* .cursor-background:after { */
-/*   right: 10px; */
-/* } */
-
+/* slider-drag */
 .slider-drag .cursor-background {
   animation:
-    scaleUp 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards,
-    bgUp 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+    scaleUp var(--scale-duration) var(--easing) forwards,
+    bgUp    var(--scale-duration) var(--easing) forwards;
 }
 
 .slider-drag .cursor-background:after {
   animation:
-    fadeIn 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards,
-    translateRightDot 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+    fadeIn             var(--fade-duration) var(--easing) forwards,
+    translateRightDot  var(--scale-duration) var(--easing) forwards;
 }
 
 .slider-drag .cursor-background:before {
   animation:
-    fadeIn 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards,
-    translateLeftDot 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+    fadeIn            var(--fade-duration) var(--easing) forwards,
+    translateLeftDot  var(--scale-duration) var(--easing) forwards;
 }
 
 .slider-drag .main-cursor {
-  animation: fadeOut 0.75s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+  animation: fadeOut 0.75s var(--easing) forwards;
 }
 
+/* hamburger menu */
 .hamburger .cursor-background {
-  animation: fadeOut 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+  animation: fadeOut var(--fade-duration) var(--easing) forwards;
+}
+.hamburger .main-cursor-background {
+  animation: scaleUp var(--scale-duration) var(--easing) forwards;
 }
 
-.hamburger .main-cursor-background {
-  animation: scaleUp 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
-}
+/* ------------------------------------------------------------------
+   Responsive fallback
+------------------------------------------------------------------ */
 
 @media (max-width: 768px) {
-  .main-cursor {
-    display: none;
-  }
+  .main-cursor,
   .secondary-cursor {
     display: none;
   }
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
+/* ------------------------------------------------------------------
+   Keyframes
+------------------------------------------------------------------ */
 
-  100% {
-    opacity: 1;
-  }
-}
+@keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
 
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
+@keyframes bgUp   { from { background-color: transparent; } to { background-color: black; } }
+@keyframes bgDown { from { background-color: black; }       to { background-color: transparent; } }
 
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes bgUp {
-  from {
-    background-color: transparent;
-  }
-
-  to {
-    background-color: black;
-  }
-}
-
-@keyframes bgDown {
-  from {
-    background-color: black;
-  }
-
-  to {
-    background-color: transparent;
-  }
-}
-
-/* @keyframes scaleUp { */
-/*   from { */
-/*     transform: scale(1); */
-/*   } */
-/**/
-/*   to { */
-/*     transform: scale(1.5); */
-/*   } */
-/* } */
-/**/
-/* @keyframes scaleDown { */
-/*   from { */
-/*     transform: scale(1.5); */
-/*   } */
-/**/
-/*   to { */
-/*     transform: scale(1); */
-/*   } */
-/* } */
-/**/
-/* @keyframes translateLeftDot { */
-/*   from { */
-/*     transform: translate(20px, -50%); */
-/*   } */
-/**/
-/*   to { */
-/*     transform: translate(0px, -50%); */
-/*   } */
-/* } */
-/**/
-/* @keyframes translateRightDot { */
-/*   from { */
-/*     transform: translate(-20px, -50%); */
-/*   } */
-/**/
-/*   to { */
-/*     transform: translate(0px, -50%); */
-/*   } */
-/* } */
-
-/* at the bottom of your style.css */
-
-.secondary-cursor {
-  /* create a new stacking context so blend modes see the page behind */
-  isolation: isolate;
-  /* invert whatever is behind it: white → black over white, white over black */
-  mix-blend-mode: difference;
-  /* mix-blend-mode: luminosity; */
-}
-
-/* you can now simplify these, leaving only stroke/fill and sizing: */
-.secondary-cursor svg,
-.secondary-cursor svg circle,
-.secondary-cursor svg polygon {
-  overflow: visible; /* allow full outline */
-  stroke: #fff; /* define “foreground” for the difference */
-  vector-effect: non-scaling-stroke;
-  /* remove stroke-width here if you already set it inline */
-}
-
-/* keep your show/hide logic */
-.secondary-cursor svg circle {
-  display: block;
-}
-.secondary-cursor svg polygon {
-  display: none;
-}
-.secondary-cursor.hovering svg circle {
-  display: none;
-}
-.secondary-cursor.hovering svg polygon {
-  display: block;
-}
+/* scaleUp, translateRightDot, translateLeftDot
+   are assumed to exist elsewhere in the stylesheet */
