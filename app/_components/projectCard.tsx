@@ -32,6 +32,8 @@ export function ProjectCard({ project }: { project: Project }) {
       data-cycle-count={dataCycleCount}
     >
       <Tilt
+        transitionSpeed={1500}
+        // transitionEasing="cubic-bezier(0.5, 0.98, 0.52, 0.99)"
         tiltReverse={true}
         perspective={500}
         glareEnable={false}
