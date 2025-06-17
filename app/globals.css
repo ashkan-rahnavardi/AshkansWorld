@@ -56,7 +56,6 @@ body {
   }
 }
 
-
 .navbar-item {
   color: hsla(0, 0%, 100%, 0.5);
   font-size: 22px;
@@ -628,7 +627,6 @@ footer {
 .social-link:hover {
   color: #ff32ba;
 }
-
 
 .word-break {
   word-break: break-word;

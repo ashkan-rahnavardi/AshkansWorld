@@ -235,7 +235,7 @@ function CustomCursor(): JSX.Element {
 
       addHoverCls();
 
-      const cycles = Number(target.dataset.cycleCount ?? 1);
+      const cycles = Number(target.dataset.cycleCount ?? 7);
 
       if (polygonRef.current) {
         if (!animatorRef.current) {
@@ -321,4 +321,3 @@ function CustomCursor(): JSX.Element {
 }
 
 export default CustomCursor;
-

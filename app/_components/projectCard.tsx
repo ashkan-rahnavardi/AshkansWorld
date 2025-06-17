@@ -48,7 +48,7 @@ export function ProjectCard({ project }: { project: Project }) {
         }}
       >
         <div className="absolute bottom-0 text-primary inner-element -left-20 md:-left-8 w-24">
-          <h3>{title1}</h3>
+          <h3 className="whitespace-nowrap">{title1}</h3>
           {/* <h3>{title2 || "\u00A0"}</h3> */}
           <h3>{title2}</h3>
           <div className="h-1 bg-primary my-2"></div>
