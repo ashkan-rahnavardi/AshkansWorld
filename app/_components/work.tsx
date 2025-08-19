@@ -73,7 +73,7 @@ export default function Work() {
             Projects<span className="ml-1">/&gt;</span>
           </small>
 
-          <div className="text-primaryGray">
+          <div className="text-primaryGray pb-4">
             <h4>Freelance Portfolio</h4>
           </div>
         </div>
