@@ -18,12 +18,12 @@ function About() {
             </div>
             <div className="code" data-line-nr="02">
               <div className="dot">..</div>
-              <div className="comment">&#47;&#47; I can, because I do.</div>
+              <div className="comment">&#47;&#47; I can, because I will.</div>
             </div>
             <div className="code" data-line-nr="03">
               <div className="dot">..</div>
               <div className="comment">
-                &#47;&#47; Only time stands between me and my goals.
+                &#47;&#47; It&#39;s not that serious.
               </div>
             </div>
             <div className="code" data-line-nr="04">
@@ -97,8 +97,7 @@ function About() {
               &#58;
               <span className="string">
                 {" "}
-                &#39;Traffic Operations Technician at City of
-                Vancouver&#39;{" "}
+                &#39;Traffic Operations Technician at City of Vancouver&#39;{" "}
               </span>
               &#125;
             </div>
@@ -226,7 +225,10 @@ function About() {
                 {" "}
                 &#39;Docker &#38; Docker Compose&#39;
               </span>
-              , <span className="string"> &#39;Github Actions CI/CD&#39;</span>,{" "}
+              , <span className="string">
+                {" "}
+                &#39;Github Actions CI/CD&#39;
+              </span>,{" "}
               <span className="string"> &#39;Linux (NixOS/Arch)&#39;</span>,
               <span className="string"> &#39;SSL/TLS&#39;</span>&#93;,
             </div>
