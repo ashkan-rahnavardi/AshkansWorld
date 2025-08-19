@@ -79,15 +79,15 @@ export default function WayFinder() {
                 Geolocation, Color coordinated map markers, Building/Amenity
                 photo and description.
               </div>
-            </div>
-            <div className="flex w-full justify-center mb-8">
-              <a
-                className="btn"
-                href="https://main.d2n0ewxt6gwakc.amplifyapp.com/"
-                target="_blank"
-              >
-                Demo
-              </a>
+              <div className="flex w-full justify-center mb-8">
+                <a
+                  className="btn"
+                  href="https://main.d2n0ewxt6gwakc.amplifyapp.com/"
+                  target="_blank"
+                >
+                  Demo
+                </a>
+              </div>
             </div>
 
             <div>

@@ -13,7 +13,12 @@ const CONFIG = {
   SPRING_K: 0.1, // spring stiffness for follower cursor
   SPRING_D: 0.78, // damping for follower cursor
   FINISH_THRESHOLD: 0.1,
+  DEFAULT_CYCLES: 7,
   DEFAULT_BASE_R: 8,
+  DEFAULT_AMPLITUDE: 8,
+  DEFAULT_PHASESPEED: 1.4,
+  DEFAULT_RESOLUTION: 100,
+  DEFAULT_ROTATIONSPEED: 2.5,
 };
 
 /* ------------------------------------------------------------------ */
@@ -235,7 +240,19 @@ function CustomCursor(): JSX.Element {
 
       addHoverCls();
 
-      const cycles = Number(target.dataset.cycleCount ?? 7);
+      const cycles = Number(target.dataset.cycleCount ?? CONFIG.DEFAULT_CYCLES);
+      const amplitude = Number(
+        target.dataset.amplitude ?? CONFIG.DEFAULT_AMPLITUDE,
+      );
+      const phaseSpeed = Number(
+        target.dataset.phaseSpeed ?? CONFIG.DEFAULT_PHASESPEED,
+      );
+      const resolution = Number(
+        target.dataset.resolution ?? CONFIG.DEFAULT_RESOLUTION,
+      );
+      const rotationSpeed = Number(
+        target.dataset.rotationSpeed ?? CONFIG.DEFAULT_ROTATIONSPEED,
+      );
 
       if (polygonRef.current) {
         if (!animatorRef.current) {
@@ -243,11 +260,11 @@ function CustomCursor(): JSX.Element {
             polygonRef.current,
             {
               cycleCount: cycles,
-              amplitudePct: 8,
-              phaseSpeed: 1.4,
+              amplitudePct: amplitude,
+              phaseSpeed: phaseSpeed,
               baseR: CONFIG.DEFAULT_BASE_R,
-              resolution: 100,
-              rotationSpeed: 2.5,
+              resolution: resolution,
+              rotationSpeed: rotationSpeed,
             },
             () => {
               animatorRef.current = null;
@@ -257,11 +274,11 @@ function CustomCursor(): JSX.Element {
         } else {
           animatorRef.current.setOptions({
             cycleCount: cycles,
-            amplitudePct: 8,
-            phaseSpeed: 1.4,
+            amplitudePct: amplitude,
+            phaseSpeed: phaseSpeed,
             baseR: CONFIG.DEFAULT_BASE_R,
-            resolution: 100,
-            rotationSpeed: 2.5,
+            resolution: resolution,
+            rotationSpeed: rotationSpeed,
           });
         }
       }

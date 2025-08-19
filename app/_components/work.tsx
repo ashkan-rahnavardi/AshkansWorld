@@ -21,7 +21,7 @@ const professionalProjects: Project[] = [
     title1: "RTB",
     title2: "Brands",
     num: "01",
-    route: "#projects",
+    route: "/projects/RTBBrands",
     classes: "col-sm-10 col-md-4 mt-20",
     dataCycleCount: "4",
   },
@@ -91,7 +91,7 @@ export default function Work() {
       <div className="row w-full self-top items-start justify-center">
         <div className="mx-auto pt-0 col-sm-7 col-md-7 col-9">
           <div className="text-primaryGray">
-            <h4>Independent Builds</h4>
+            <h4 className="text-right">Independent Builds</h4>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import CustomCursor from "../../../app/_components/_cursor/index";
 
-export default function OverHorizon() {
+export default function RTBBrands() {
   return (
     <>
       <CustomCursor />

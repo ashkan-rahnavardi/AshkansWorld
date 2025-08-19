@@ -94,15 +94,15 @@ export default function PlateGrabber() {
                 date, Geolocation &#40;in development&#41;, Secure login system
                 &#40;in development&#41;
               </div>
-            </div>
-            <div className="flex w-full justify-center mb-8">
-              <a
-                className="btn"
-                href="https://main.d2zroxwrh5ormt.amplifyapp.com/"
-                target="_blank"
-              >
-                Demo
-              </a>
+              <div className="flex w-full justify-center mb-8">
+                <a
+                  className="btn"
+                  href="https://main.d2zroxwrh5ormt.amplifyapp.com/"
+                  target="_blank"
+                >
+                  Demo
+                </a>
+              </div>
             </div>
             <div>
               <a

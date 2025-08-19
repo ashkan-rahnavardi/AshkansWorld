@@ -8,6 +8,7 @@ export default function OverHorizon() {
 
       <div id="project-view" className="container-fluid">
         <div className="row">
+          {/* LEFT: screenshots */}
           <div className="project-info col-sm-12 col-md-8">
             <div className="project-banner">
               <Image
@@ -15,7 +16,8 @@ export default function OverHorizon() {
                 alt="OverHorizon-LandingPage"
                 width={1886}
                 height={2517}
-              ></Image>
+                priority
+              />
             </div>
             <div className="project-banner">
               <Image
@@ -23,7 +25,7 @@ export default function OverHorizon() {
                 alt="OverHorizon-Mariner"
                 width={1886}
                 height={675}
-              ></Image>
+              />
             </div>
             <div className="project-banner">
               <Image
@@ -31,7 +33,7 @@ export default function OverHorizon() {
                 alt="OverHorizon-AllJobs"
                 width={1886}
                 height={1546}
-              ></Image>
+              />
             </div>
             <div className="project-banner">
               <Image
@@ -39,7 +41,7 @@ export default function OverHorizon() {
                 alt="OverHorizon-Employer"
                 width={1886}
                 height={885}
-              ></Image>
+              />
             </div>
             <div className="project-banner">
               <Image
@@ -47,64 +49,396 @@ export default function OverHorizon() {
                 alt="OverHorizon-AllMariners"
                 width={1886}
                 height={1612}
-              ></Image>
+              />
             </div>
           </div>
-          <div className="bd-sidebar col-sm-12 col-md-4">
-            <div>
-              <p className="mt-0 mb-8">
-                <a className="goBack__button" href="/" title="Go back home">
-                  ←
-                </a>
-                <span className="pull-right">
-                  <a
-                    className="text-primaryGray"
-                    href="/projects/RTBBrands"
-                    title="Next"
-                  >
-                    →
-                  </a>
-                </span>
-              </p>
-              <div className="my-4">
-                <small className="tags">#Design, </small>
-                <small className="tags">#WordPress, </small>
-                <small className="tags">#PHP, </small>
-                <small className="tags">#jQuery, </small>
-                <small className="tags">#WebApp </small>
-              </div>
-              <h2 className="projectTitle-summary">Over Horizon Mariners</h2>
-              <div className="projectDescription mb-8">
-                As my second independent freelance project, I led the end-to-end
-                management and development of Over Horizon, an HR-tech platform
-                that matches internationally trained mariners with Canadian
-                maritime employers. Built on WordPress with custom plugins and
-                WooCommerce integrations, the MVP launched in three months and
-                secured early paying subscribers.
-              </div>
-              <div className="projectDescription mb-8">
-                <span className="projectDescription__highlight">
-                  Features:{" "}
-                </span>
-                Multi-tier subscription & pay-per-post job listings, Custom
-                WordPress plugin & theme, WooCommerce Subscriptions integration,
-                Secure MD5-hashed resume retrieval system, Event-driven logging
-                & monitoring, Responsive mobile-friendly interface
-              </div>
-              <div className="flex w-full justify-center">
+
+          {/* RIGHT: new article content */}
+          <aside className="bd-sidebar col-sm-12 col-md-4">
+            <p className="mt-0 mb-8">
+              <a className="goBack__button" href="/" title="Go back home">
+                ←
+              </a>
+              <span className="pull-right">
                 <a
-                  className="btn"
-                  href="https://over-horizon-mariners.com/"
-                  target="_blank"
+                  className="text-primaryGray"
+                  href="/projects/RTBBrands"
+                  title="Next"
                 >
-                  Visit
+                  →
                 </a>
-              </div>
-            </div>
-            <div className="divider-line text-primary mt-4">00</div>
-          </div>
+              </span>
+            </p>
+
+            <article className="wrap">
+              <header>
+                <h1>Over Horizon — Vetted HR Platform for Mariners</h1>
+                <p className="lede">
+                  A centralized job platform connecting skilled immigrant
+                  mariners (e.g., from Ukraine and abroad) with verified
+                  Canadian shipping employers. Built and launched as a
+                  revenue-generating MVP in 3 months.
+                </p>
+                <div className="chips" aria-label="Quick tags">
+                  <span className="chip">HR Tech</span>
+                  <span className="chip">Marketplace</span>
+                  <span className="chip">B2B Payments</span>
+                  <span className="chip">Security</span>
+                  <span className="chip">MVP</span>
+                </div>
+              </header>
+
+              <section className="grid" aria-label="Overview">
+                <div className="card">
+                  <h2>Project Overview</h2>
+                  <p>
+                    Over Horizon solves a visibility and trust problem:
+                    experienced mariners struggle to discover Canadian job
+                    openings unless they already know which companies to
+                    approach, and employers have limited confidence in applicant
+                    legitimacy. The platform centralizes vetted job postings and
+                    provides a verified candidate pool, creating a faster and
+                    safer hiring experience for both sides.
+                  </p>
+                </div>
+                <aside className="card">
+                  <h3>At a Glance</h3>
+                  <ul>
+                    <li>
+                      <strong>Role:</strong> Freelance Full-Stack Developer
+                    </li>
+                    <li>
+                      <strong>Engagement:</strong> Sep&nbsp;2024 → Present
+                    </li>
+                    <li>
+                      <strong>MVP Timeline:</strong> ~12 weeks to launch
+                    </li>
+                    <li>
+                      <strong>Live:</strong>{" "}
+                      <a
+                        href="https://over-horizon-mariners.com/"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        Visit Over Horizon
+                      </a>
+                    </li>
+                  </ul>
+                </aside>
+              </section>
+
+              <section>
+                <div className="stats" aria-label="Key results">
+                  <div className="stat">
+                    <div className="k">3 mo</div>
+                    <div>MVP to Production</div>
+                  </div>
+                  <div className="stat">
+                    <div className="k">50+ </div>
+                    <div>Paying users in Q1</div>
+                  </div>
+                  <div className="stat">
+                    <div className="k">Investor</div>
+                    <div>Demo meetings secured</div>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <h2>Problem</h2>
+                <ul>
+                  <li>
+                    No central, industry-specific job board for mariners seeking
+                    Canadian roles.
+                  </li>
+                  <li>
+                    Employers lacked confidence in applicant authenticity and
+                    credentials.
+                  </li>
+                  <li>
+                    Fragmented processes for posting jobs, managing applicants,
+                    and collecting payments.
+                  </li>
+                </ul>
+
+                <h2>Solution</h2>
+                <p>
+                  A centralized, vetted HR platform with role-specific
+                  onboarding, secure resume handling, and built-in monetization.
+                  The product supports three main user groups—mariners,
+                  employers, and operations/admin—each with the tools they need
+                  to move from discovery to hire.
+                </p>
+
+                <h3>Core Product Capabilities</h3>
+                <ul>
+                  <li>
+                    <strong>Vetted Talent Pool:</strong> Resume verification
+                    workflow by the Over Horizon team to ensure employer trust.
+                  </li>
+                  <li>
+                    <strong>Centralized Job Postings:</strong> Employers publish
+                    openings and review verified candidates in one place.
+                  </li>
+                  <li>
+                    <strong>Secure Resume Delivery:</strong> Token-based links
+                    prevent unauthorized access or sharing of candidate data.
+                  </li>
+                  <li>
+                    <strong>Monetization:</strong> Subscriptions and
+                    pay-per-post options tailored to each user group.
+                  </li>
+                  <li>
+                    <strong>Billing Automation:</strong> Recurring payments via
+                    WooCommerce Subscriptions and custom plugins.
+                  </li>
+                </ul>
+              </section>
+
+              <section>
+                <h2>My Contributions</h2>
+                <ul>
+                  <li>
+                    Led discovery, scoping, and delivery from concept to AWS
+                    production in ~12 weeks.
+                  </li>
+                  <li>
+                    Implemented the multi-tier monetization model (subscriptions
+                    + pay-per-post) across 3 user groups.
+                  </li>
+                  <li>
+                    Built the secure, token-based resume delivery mechanism and
+                    verification workflow.
+                  </li>
+                  <li>
+                    Developed a custom WordPress theme and plugins; integrated
+                    WooCommerce Subscriptions for recurring billing.
+                  </li>
+                  <li>
+                    Set up CI/CD and cloud infrastructure; ran weekly
+                    stakeholder demos to accelerate iteration.
+                  </li>
+                </ul>
+              </section>
+
+              <section className="grid" aria-label="Architecture">
+                <div className="card">
+                  <h2>Architecture &amp; Stack</h2>
+                  <ul>
+                    <li>
+                      <strong>Frontend:</strong> React, Next.js
+                    </li>
+                    <li>
+                      <strong>Backend &amp; CMS:</strong> PHP, WordPress, custom
+                      plugins
+                    </li>
+                    <li>
+                      <strong>Commerce:</strong> WooCommerce + Subscriptions
+                    </li>
+                    <li>
+                      <strong>Data:</strong> PostgreSQL/MySQL
+                      (project-appropriate), REST APIs
+                    </li>
+                    <li>
+                      <strong>Infra &amp; CI/CD:</strong> AWS (EC2, S3,
+                      Route&nbsp;53, IAM), Docker, GitHub Actions
+                    </li>
+                    <li>
+                      <strong>Security:</strong> Role-based access control,
+                      tokenized resume delivery
+                    </li>
+                  </ul>
+                </div>
+                <div className="card">
+                  <h3>Why this approach?</h3>
+                  <ul>
+                    <li>
+                      <strong>Speed to market:</strong> MVP shipped quickly with
+                      a stack that balances velocity and maintainability.
+                    </li>
+                    <li>
+                      <strong>Built-in monetization:</strong> WooCommerce
+                      Subscriptions provides reliable recurring billing.
+                    </li>
+                    <li>
+                      <strong>Operational trust:</strong> Verification workflows
+                      + secure delivery address employer concerns.
+                    </li>
+                    <li>
+                      <strong>Scalability:</strong> Containerized services and
+                      CI/CD enable safe, frequent releases.
+                    </li>
+                  </ul>
+                </div>
+              </section>
+
+              <section>
+                <h2>Outcomes</h2>
+                <ul>
+                  <li>
+                    <strong>Revenue-generating MVP</strong> delivered in 3
+                    months.
+                  </li>
+                  <li>
+                    <strong>50+ paying users</strong> within the first quarter
+                    after launch.
+                  </li>
+                  <li>
+                    Facilitated <strong>investor demo meetings</strong> for the
+                    founding team.
+                  </li>
+                  <li>
+                    Faster iteration cycles through weekly stakeholder demos and
+                    feedback loops.
+                  </li>
+                </ul>
+              </section>
+
+              <section>
+                <h2>Process Notes &amp; Lessons</h2>
+                <ul>
+                  <li>
+                    <strong>Discovery to scope:</strong> early workshops
+                    clarified user roles (mariner, employer, admin) and the
+                    verification requirement.
+                  </li>
+                  <li>
+                    <strong>Risk reduction:</strong> tokenized resume links +
+                    verification workflows addressed core trust issues from day
+                    one.
+                  </li>
+                  <li>
+                    <strong>Monetization design:</strong> offering both
+                    subscriptions and pay-per-post lowered adoption friction for
+                    different user types.
+                  </li>
+                  <li>
+                    <strong>Delivery rhythm:</strong> weekly demos reduced
+                    turnaround time for priority features by ~30%.
+                  </li>
+                </ul>
+              </section>
+
+              <div className="divider-line text-primary mt-4">00</div>
+            </article>
+          </aside>
         </div>
       </div>
     </>
   );
 }
+
+// import Image from "next/image";
+// import CustomCursor from "../../../app/_components/_cursor/index";
+//
+// export default function OverHorizon() {
+//   return (
+//     <>
+//       <CustomCursor />
+//
+//       <div id="project-view" className="container-fluid">
+//         <div className="row">
+//           <div className="project-info col-sm-12 col-md-8">
+//             <div className="project-banner">
+//               <Image
+//                 src="/overhorizon/landing.png"
+//                 alt="OverHorizon-LandingPage"
+//                 width={1886}
+//                 height={2517}
+//               ></Image>
+//             </div>
+//             <div className="project-banner">
+//               <Image
+//                 src="/overhorizon/mariner.png"
+//                 alt="OverHorizon-Mariner"
+//                 width={1886}
+//                 height={675}
+//               ></Image>
+//             </div>
+//             <div className="project-banner">
+//               <Image
+//                 src="/overhorizon/all-jobs.png"
+//                 alt="OverHorizon-AllJobs"
+//                 width={1886}
+//                 height={1546}
+//               ></Image>
+//             </div>
+//             <div className="project-banner">
+//               <Image
+//                 src="/overhorizon/employer.png"
+//                 alt="OverHorizon-Employer"
+//                 width={1886}
+//                 height={885}
+//               ></Image>
+//             </div>
+//             <div className="project-banner">
+//               <Image
+//                 src="/overhorizon/all-mariners.png"
+//                 alt="OverHorizon-AllMariners"
+//                 width={1886}
+//                 height={1612}
+//               ></Image>
+//             </div>
+//           </div>
+//           <div className="bd-sidebar col-sm-12 col-md-4">
+//             <div>
+//               <p className="mt-0 mb-8">
+//                 <a className="goBack__button" href="/" title="Go back home">
+//                   ←
+//                 </a>
+//                 <span className="pull-right">
+//                   <a
+//                     className="text-primaryGray"
+//                     href="/projects/RTBBrands"
+//                     title="Next"
+//                   >
+//                     →
+//                   </a>
+//                 </span>
+//               </p>
+//               <div className="my-4">
+//                 <small className="tags">#MVP, </small>
+//                 <small className="tags">#WordPress, </small>
+//                 <small className="tags">#PHP, </small>
+//                 <small className="tags">#AWS, </small>
+//                 <small className="tags">#WebApp </small>
+//               </div>
+//               <h2 className="projectTitle-summary">
+//                 Over Horizon - Vetted HR Platform for Mariners
+//               </h2>
+//               <div className="projectDescription mb-8">
+//                 A centralized job platform connecting skilled immigrant mariners
+//                 (e.g., from Ukraine and abroad) with verified Canadian shipping
+//                 employers. Built and launched as a revenue‑generating MVP in 3
+//                 months.
+//               </div>
+//               <div className="projectDescription mb-8">
+//                 <span className="projectDescription__highlight">
+//                   Project Overview:{" "}
+//                 </span>
+//                 <br />
+//                 Over Horizon solves a visibility and trust problem: experienced
+//                 mariners struggle to discover Canadian job openings unless they
+//                 already know which companies to approach, and employers have
+//                 limited confidence in applicant legitimacy. The platform
+//                 centralizes vetted job postings and provides a verified
+//                 candidate pool, creating a faster and safer hiring experience
+//                 for both sides.
+//               </div>
+//               <div className="flex w-full justify-center">
+//                 <a
+//                   className="btn"
+//                   href="https://over-horizon-mariners.com/"
+//                   target="_blank"
+//                 >
+//                   Visit
+//                 </a>
+//               </div>
+//             </div>
+//             <div className="divider-line text-primary mt-4">00</div>
+//           </div>
+//         </div>
+//       </div>
+//     </>
+//   );
+// }

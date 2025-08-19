@@ -121,11 +121,11 @@ export default function SotBy() {
                 schedule, create/request resources for classes, request/approve
                 vacations, and more.
               </div>
-            </div>
-            <div className="flex w-full justify-center mb-8">
-              <button className="btn disabled" disabled>
-                Demo not Available
-              </button>
+              <div className="flex w-full justify-center mb-8">
+                <button className="btn disabled" disabled>
+                  Demo not Available
+                </button>
+              </div>
             </div>
 
             <div>
