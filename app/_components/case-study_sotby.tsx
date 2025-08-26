@@ -14,7 +14,7 @@ export default function SotByCaseStudy() {
             >
               ←
             </a>
-            <a className="text-primaryGray"> / </a>
+            <a className="text-primaryGray font-bold text-lg"> / </a>
             <a
               className="text-primaryGray"
               href="/projects/WayFinder"

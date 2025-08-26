@@ -12,7 +12,7 @@ export default function OverHorizonCaseStudy() {
               href="/projects/RTBBrands"
               title="Next"
             >
-              ➜
+              →
             </a>
           </span>
         </p>

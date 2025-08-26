@@ -12,15 +12,15 @@ export default function RTBBrandsCaseStudy() {
               href="/projects/OverHorizon"
               title="Previous"
             >
-              ⬅
+              ←
             </a>
-            <a className="text-primaryGray"> / </a>
+            <a className="text-primaryGray font-bold text-lg"> / </a>
             <a
               className="text-primaryGray font-bold text-lg"
               href="/projects/Plate-Grabber"
               title="Next"
             >
-              ➜
+              →
             </a>
           </span>
         </p>
