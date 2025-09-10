@@ -71,44 +71,46 @@ function About() {
             <div className="code" data-line-nr="11">
               <div className="dot">......</div>
               &#123;
-              <span className="string"> &#39;09/24-present&#39; </span>
+              <span className="string"> &#39;05/24-today&#39; </span>
               &#58;
               <span className="string">
                 {" "}
-                &#39;Freelance Full-stack Developer at OverHorizon&#39;{" "}
+                &#39;Full-Stack Developer/Owner at AR Solutions&#39;{" "}
               </span>
               &#125;
             </div>
             <div className="code" data-line-nr="12">
               <div className="dot">......</div>
               &#123;
-              <span className="string"> &#39;05/24-05/25&#39; </span>
+              <span className="string"> &#39;05/23-05/24&#39; </span>
               &#58;
               <span className="string">
                 {" "}
-                &#39;Freelance Full-stack Developer at RTB Brands&#39;{" "}
+                &#39;Traffic Operations Technician at City of
+                Vancouver&#39;{" "}
               </span>
               &#125;
             </div>
             <div className="code" data-line-nr="13">
               <div className="dot">......</div>
               &#123;
-              <span className="string"> &#39;05/23-05/24&#39; </span>
+              <span className="string"> &#39;02/18-09/21&#39; </span>
               &#58;
               <span className="string">
                 {" "}
-                &#39;Traffic Operations Technician at City of Vancouver&#39;{" "}
+                &#39;Sales Representative at Telus&#39;{" "}
               </span>
               &#125;
             </div>
             <div className="code" data-line-nr="14">
               <div className="dot">......</div>
               &#123;
-              <span className="string"> &#39;02/18-01/21&#39; </span>
+              <span className="string"> &#39;05/17-02/18&#39; </span>
               &#58;
               <span className="string">
                 {" "}
-                &#39;Sales Representative at Telus&#39;{" "}
+                &#39;Door-to-Door Sales Representative at Canadian Property
+                Stars&#39;{" "}
               </span>
               &#125;
             </div>
@@ -133,7 +135,7 @@ function About() {
             <div className="code" data-line-nr="19">
               <div className="dot">......</div>
               &#123;
-              <span className="string"> &#39;01/21-04/23&#39; </span>
+              <span className="string"> &#39;01/21-01/23&#39; </span>
               &#58;
               <span className="string">
                 {" "}
@@ -145,7 +147,7 @@ function About() {
             <div className="code" data-line-nr="20">
               <div className="dot">......</div>
               &#123;
-              <span className="string"> &#39;09/13-04/18&#39; </span>
+              <span className="string"> &#39;09/13-06/18&#39; </span>
               &#58;
               <span className="string">
                 {" "}
