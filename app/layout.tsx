@@ -1,31 +1,32 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import CustomCursorManager from './_components/_cursor/context/manager';
-import CustomCursor from './_components/_cursor/index';
-import './globals.css';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import CustomCursorManager from "./_components/_cursor/context/manager";
+import CustomCursor from "./_components/_cursor/index";
+import "./globals.css";
+import "./typography.css";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: 'ASH',
-	description: 'Ashkan Rahnavardis personal website',
+  title: "ASH",
+  description: "Ashkan Rahnavardis personal website",
 };
 
 export default function RootLayout({
-	children,
+  children,
 }: {
-	children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-	return (
-		<html lang="en">
-			<head>
-				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  return (
+    <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-				<title>ASH</title>
-			</head>
-			<body className={inter.className}>
-				<CustomCursorManager>{children}</CustomCursorManager>
-			</body>
-		</html>
-	);
+        <title>ASH</title>
+      </head>
+      <body className={inter.className}>
+        <CustomCursorManager>{children}</CustomCursorManager>
+      </body>
+    </html>
+  );
 }
