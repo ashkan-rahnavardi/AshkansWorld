@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;500;700;800&family=Roboto+Mono:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 24px;
+  color: #f9f9f9;
+  line-height: 1.5;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  font-family:
+    JetBrains Mono,
+    Roboto Condensed,
+    Lato,
+    Arial,
+    sans-serif !important;
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl font-bold;
+  }
+  h2 {
+    @apply text-3xl font-bold;
+  }
+  h3 {
+    @apply text-2xl font-bold;
+  }
+  h4 {
+    @apply text-[#988e9f] text-[30px] font-bold leading-[1.2];
+
+    /* font-family: "Roboto Condensed", Lato, Arial, sans-serif !important; */
+  }
+  p {
+    @apply text-2xl font-normal;
+  }
+  small {
+    @apply text-lg font-light;
+  }
+
+  #blog p {
+    @apply text-xl font-normal;
+  }
+}
+
+@layer components {
+  .navbar-link {
+    @apply text-primaryGray text-nav font-bold px-2 hover:text-primary;
+  }
+  .navbar-link-suffix {
+    @apply text-primaryDark ml-1;
+  }
+}

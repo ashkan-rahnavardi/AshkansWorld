@@ -1,54 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;500;700;800&family=Roboto+Mono:wght@300;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-html {
-  font-size: 16px;
-}
-
-body {
-  font-size: 24px;
-  color: #f9f9f9;
-  line-height: 1.5;
-  text-align: left;
-  margin: 0;
-  padding: 0;
-  font-family:
-    JetBrains Mono,
-    Roboto Condensed,
-    Lato,
-    Arial,
-    sans-serif !important;
-}
-
-@layer base {
-  h1 {
-    @apply text-4xl font-bold;
-  }
-  h2 {
-    @apply text-3xl font-bold;
-  }
-  h3 {
-    @apply text-2xl font-bold;
-  }
-  h4 {
-    @apply text-[#988e9f] text-[30px] font-bold leading-[1.2];
-
-    /* font-family: "Roboto Condensed", Lato, Arial, sans-serif !important; */
-  }
-  p {
-    @apply text-2xl font-normal;
-  }
-  small {
-    @apply text-lg font-light;
-  }
-
-  #blog p {
-    @apply text-xl font-normal;
-  }
-}
 
 @media (min-width: 768px) {
   * {
@@ -56,19 +8,19 @@ body {
   }
 }
 
-.nav-arrow {
-  font-size: 2.5rem; /* makes the arrow larger */
-  font-weight: 900; /* extra-bold */
-  line-height: 1;
-}
+/* .nav-arrow { */
+/*   font-size: 2.5rem; */
+/*   font-weight: 900; */
+/*   line-height: 1; */
+/* } */
 
-.navbar-item {
-  color: hsla(0, 0%, 100%, 0.5);
-  font-size: 22px;
-  font-weight: 700;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
+/* .navbar-item { */
+/*   color: hsla(0, 0%, 100%, 0.5); */
+/*   font-size: 22px; */
+/*   font-weight: 700; */
+/*   padding-left: 0.5rem; */
+/*   padding-right: 0.5rem; */
+/* } */
 
 .navbar-dropdown {
   background-image: linear-gradient(-180deg, #0e0c16, #0e0c16 88%, #0e0c16 99%);

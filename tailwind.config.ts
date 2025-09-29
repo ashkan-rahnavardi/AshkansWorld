@@ -14,6 +14,11 @@ const config: Config = {
       jetbrains: ["JetBrains Mono", "ui-monospace", "monospace"],
     },
     extend: {
+      fontSize: {
+        // nav: ["22px", { lineHeight: "1" }],
+
+        nav: "22px",
+      },
       colors: {
         primary: "#f9f9f9",
         primaryDark: "#494949",
