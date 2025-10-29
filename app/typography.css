@@ -164,11 +164,10 @@ small {
 
 @layer components {
   .navbar-link {
+    /* font-family: Roboto Condensed; */
     color: #989e9f;
     font-size: 22px;
     font-weight: 700;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
   }
   .navbar-link:hover {
     color: #f9f9f9;

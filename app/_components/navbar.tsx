@@ -46,7 +46,7 @@ export default function NavBar(): JSX.Element {
           {LINKS.map(({ href, label }) => (
             <a key={href} href={href} className="navbar-link">
               {label}
-              <span className="navbar-link-suffix">/&gt;</span>
+              <span className="navbar-link-suffix closing-tag">/&gt;</span>
             </a>
           ))}
         </div>

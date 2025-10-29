@@ -43,8 +43,8 @@ function Start() {
               }
             >
               <span className="block-reveal__block white"></span>
-              <small className="section-title block-reveal__text section-start">
-                Start<span className="ml-1">/&gt;</span>
+              <small className="tag_text block-reveal__text section-start">
+                Start<span className="ml-1 closing-tag">/&gt;</span>
               </small>
             </div>
             <div className="mb-2 md:mb-4"></div>
@@ -65,7 +65,7 @@ function Start() {
               }
             >
               <span className="block-reveal__block"></span>
-              <h1 className="block-reveal__text subtitle mt-0 ws-nowrap">
+              <h1 className="block-reveal__text start-main_text mt-0 ws-nowrap">
                 I <em className="font-serif font-normal">design</em> and{" "}
                 <span className="font-mono font-bold">develop</span>{" "}
                 <br className="newline" />
@@ -80,7 +80,7 @@ function Start() {
               }
             >
               <span className="block-reveal__block white"></span>
-              <p className="text-primaryGray block-reveal__text section-showyou">
+              <p className="text-primaryGray block-reveal__text section-showyou start-sub_text">
                 Let me show you...
               </p>
             </div>
