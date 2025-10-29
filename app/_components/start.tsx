@@ -30,7 +30,7 @@ function Start() {
 
   return (
     <header id="start">
-      <div className="min-h-screen w-screen bg-start-page bg-cover flex relative container-fluid">
+      <div className="min-h-screen w-screen bg-start-page bg-cover flex relative container-fluid py-8 md:py-0">
         <div className="relative row w-full flex flex-initial items-center self-center justify-center">
           <div className="mx-auto col-sm-7 col-md-7 col-9">
             <div className="timeline">
@@ -47,19 +47,17 @@ function Start() {
                 Start<span className="ml-1">/&gt;</span>
               </small>
             </div>
-            <br />
+            <div className="mb-2 md:mb-4"></div>
 
             <div className="block-reveal block-reveal--active">
               <span className="block-reveal__block"></span>
-              <h1 className="block-reveal__text subtitle mb-0">
+              <h1 className="block-reveal__text mb-0 start-main_text">
                 Hi, my name is{" "}
-                <strong className="text-purple font-extrabold">
-                  Ashkan Rahnavardi
-                </strong>
+                <strong className="text-purple ">Ashkan Rahnavardi</strong>
                 <br></br>
               </h1>
             </div>
-            <br />
+            <div className="mb-2 md:mb-4"></div>
 
             <div
               className={

@@ -12,7 +12,7 @@ const LINKS: LinkItem[] = [
   { href: "#contact", label: "Contact" },
 ];
 
-// TODO: 
+// TODO:
 // - Make the background for the mobile dropdown fuzzy/blend better
 // - Make the hamburger mobile icon turn into an X when its open
 

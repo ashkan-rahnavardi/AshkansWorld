@@ -4,6 +4,7 @@ import CustomCursorManager from "./_components/_cursor/context/manager";
 import CustomCursor from "./_components/_cursor/index";
 import "./globals.css";
 import "./typography.css";
+import "./typ.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

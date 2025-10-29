@@ -1,0 +1,16 @@
+.start-main_text {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+@media (max-width: 990px) {
+  .start-main_text {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 568px) {
+  .start-main_text {
+    font-size: 30px;
+  }
+}

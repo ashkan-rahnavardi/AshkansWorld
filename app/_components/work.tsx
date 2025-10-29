@@ -65,7 +65,10 @@ const personalProjects: Project[] = [
 
 export default function Work() {
   return (
-    <div id="projects" className="w-screen relative container-fluid pb-10">
+    <div
+      id="projects"
+      className="w-screen relative container-fluid pb-6 md:pb-10"
+    >
       <div className="row w-full self-top items-start justify-center">
         <div className="mx-auto pt-0 col-sm-7 col-md-7 col-9">
           <div className="timeline alt"></div>
@@ -73,12 +76,12 @@ export default function Work() {
             Projects<span className="ml-1">/&gt;</span>
           </small>
 
-          <div className="text-primaryGray pb-8 md:pb-4">
-            <h4>Freelance Portfolio</h4>
+          <div className="text-primaryGray pb-4 md:pb-8">
+            <h4 className="">Freelance Portfolio</h4>
           </div>
         </div>
       </div>
-      <div className="row self-top w-full pt-3 mt-3 projects-row">
+      <div className="row self-top w-full pt-2 md:pt-3 mt-2 md:mt-3 projects-row">
         {professionalProjects.map((p) => (
           <div
             key={p.route}
@@ -95,7 +98,7 @@ export default function Work() {
           </div>
         </div>
       </div>
-      <div className="row self-top w-full pt-3 mt-3 projects-row">
+      <div className="row self-top w-full pt-2 md:pt-3 mt-2 md:mt-3 projects-row">
         {personalProjects.map((p) => (
           <div
             key={p.route}

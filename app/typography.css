@@ -9,9 +9,9 @@ html {
 }
 
 body {
-  font-size: 24px;
+  font-size: clamp(16px, 4vw, 24px);
   color: #f9f9f9;
-  line-height: 1.5;
+  line-height: 1.6;
   text-align: left;
   margin: 0;
   padding: 0;
@@ -23,38 +23,391 @@ body {
     sans-serif !important;
 }
 
+@media (max-width: 768px) {
+  body {
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    line-height: 1.4;
+  }
+}
+
 @layer base {
+  #blog p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+  }
+
+  @media (max-width: 768px) {
+    #blog p {
+      font-size: 1.125rem;
+      font-weight: 400;
+      line-height: 1.75rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #blog p {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5rem;
+    }
+  }
+}
+
+/* Typography - outside layers for proper specificity */
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+}
+
+h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 2.25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+}
+
+h4 {
+  color: #988e9f;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+small {
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.75rem;
+}
+
+/* Mobile responsive typography */
+@media (max-width: 768px) {
   h1 {
-    @apply text-4xl font-bold;
+    font-size: 1.875rem;
+    font-weight: 600;
+    line-height: 2.25rem;
   }
   h2 {
-    @apply text-3xl font-bold;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2rem;
   }
   h3 {
-    @apply text-2xl font-bold;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.75rem;
   }
   h4 {
-    @apply text-[#988e9f] text-[30px] font-bold leading-[1.2];
-
-    /* font-family: "Roboto Condensed", Lato, Arial, sans-serif !important; */
+    font-size: 24px;
+    font-weight: 700;
   }
   p {
-    @apply text-2xl font-normal;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.75rem;
   }
   small {
-    @apply text-lg font-light;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5rem;
   }
+}
 
-  #blog p {
-    @apply text-xl font-normal;
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+  }
+  h3 {
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+  }
+  h4 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  p {
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+  }
+  small {
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.25rem;
   }
 }
 
 @layer components {
   .navbar-link {
-    @apply text-primaryGray text-nav font-bold px-2 hover:text-primary;
+    color: #989e9f;
+    font-size: 22px;
+    font-weight: 700;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .navbar-link:hover {
+    color: #f9f9f9;
   }
   .navbar-link-suffix {
-    @apply text-primaryDark ml-1;
+    color: #494949;
+    margin-left: 0.25rem;
+  }
+
+  .subtitle {
+    font-size: clamp(28px, 6vw, 48px);
+    font-weight: 700;
+  }
+
+  .section-title {
+    color: #988e9f;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  .social-title {
+    font-weight: 500;
+    color: #f9f9f9;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+  }
+
+  .social-link {
+    color: #5918df;
+    font-size: 1.2rem;
+  }
+
+  .social-link:hover {
+    color: #ff32ba;
+  }
+
+  .projectTitle-summary {
+    color: #f9f9f9;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 2rem;
+  }
+
+  .projectDescription {
+    color: #f9f9f9;
+    font-size: 1.1rem;
+    /* font-weight: 300; */
+    margin: 0.75rem 0 1rem;
+  }
+
+  .projectDescription_text {
+    color: #f9f9f9;
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 0.75rem 0 1rem;
+  }
+
+  .projectDescription__highlight {
+    color: #f9f9f9;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+
+  .btn {
+    color: hsla(0, 0%, 100%, 0.9);
+    font-family:
+      Roboto Mono,
+      Courier New,
+      Courier,
+      monospace !important;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .code {
+    font-size: 16px;
+  }
+
+  .methods {
+    color: #5918df;
+    display: inline;
+  }
+
+  .propname {
+    color: #eeff31;
+  }
+
+  .dot {
+    color: #3b3553;
+    display: inline;
+  }
+
+  .comment {
+    color: #78707e;
+    display: inline;
+  }
+
+  .scope {
+    color: #e3244c;
+    display: inline;
+  }
+
+  .prop2 {
+    color: #24e394;
+  }
+
+  .string {
+    color: #24e33a;
+  }
+
+  .number {
+    color: #e39d24;
+  }
+
+  .key {
+    color: #ff00ff;
+  }
+
+  .boolean {
+    color: #bd1816;
+  }
+
+  .tags {
+    color: #988e9f;
+    font-weight: 400;
+  }
+
+  .cursor::before {
+    color: #f9f9f9;
+    animation: blink 1s infinite;
+    content: "|";
+    opacity: 0;
+  }
+
+  .code::after {
+    color: #3b3553;
+    content: attr(data-line-nr);
+    font-family:
+      Roboto Mono,
+      Courier New,
+      Courier,
+      monospace !important;
+    font-size: 16px;
+    left: -30px;
+    line-height: 1.6;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+  }
+
+  .copy {
+    color: #988e9f;
+    font-family:
+      Roboto Mono,
+      Courier New,
+      Courier,
+      monospace !important;
+    font-size: 14px;
+    padding-left: 20px;
+    position: absolute;
+  }
+
+  .copy small {
+    font-size: 0.875em;
+    font-weight: 400;
+  }
+
+  .goBack__button {
+    font-size: 14px;
+  }
+
+  .divider-line {
+    font-family:
+      Roboto Mono,
+      Consolas,
+      Courier New,
+      Courier,
+      monospace !important;
+    font-size: 1rem;
+    position: relative;
+    text-align: right;
+    width: 100%;
+  }
+
+  .stat .k {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #f9f9f9;
+    margin-bottom: 4px;
+  }
+
+  .stat div:last-child {
+    font-size: 0.9rem;
+    color: #a2a0b3;
+  }
+
+  @media (max-width: 768px) {
+    .navbar-link {
+      font-weight: 600;
+    }
+
+    .subtitle {
+      font-weight: 600;
+    }
+
+    .projectTitle-summary {
+      font-weight: 600;
+    }
+
+    .projectDescription_text {
+      font-weight: 400;
+    }
+
+    .code {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .navbar-link {
+      font-weight: 500;
+    }
+
+    .subtitle {
+      font-weight: 500;
+    }
+
+    .projectTitle-summary {
+      font-weight: 500;
+    }
+
+    .projectDescription_text {
+      font-weight: 400;
+    }
+
+    .code {
+      font-size: 12px;
+    }
   }
 }
