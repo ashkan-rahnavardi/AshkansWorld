@@ -1,8 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;500;700;800&family=Roboto+Mono:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;500;700;800&family=Roboto+Mono:wght@300;400;700&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"); */
 
 html {
   font-size: 16px;
@@ -16,11 +20,7 @@ body {
   margin: 0;
   padding: 0;
   font-family:
-    JetBrains Mono,
-    Roboto Condensed,
-    Lato,
-    Arial,
-    sans-serif !important;
+    "JetBrains Mono", "Roboto Condensed", Lato, Arial, sans-serif !important;
 }
 
 @layer base {
@@ -56,5 +56,91 @@ body {
   }
   .navbar-link-suffix {
     @apply text-primaryDark ml-1;
+  }
+}
+
+.text_nav_link {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.text_nav_link:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.text_timeline-title {
+  color: rgb(152, 142, 159);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.text_start_main {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.text_start_sub {
+  /* font-size: 24px; */
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+  /* font-family: Roboto Condensed; */
+  color: rgb(152, 142, 159);
+}
+
+.text_work_title {
+  color: rgb(152, 142, 159);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.text_work_project-title {
+  color: rgb(249, 249, 249);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.text_work_project-number {
+  color: #988e9f;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.text_about_code {
+  font-size: 16px;
+  font-weight: 400px;
+  line-height: 1.6;
+}
+
+.text_contact-title {
+  font-weight: 500;
+  color: #f9f9f9;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  /* font-size: 1.4rem; */
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+@media screen and (max-width: 990px) {
+  .text_start_main {
+    font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text_work_title {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .text_start_main {
+    font-size: 30px;
   }
 }

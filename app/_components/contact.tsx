@@ -3,92 +3,63 @@
 function Contact() {
   return (
     <footer id="contact">
-      <div className="relative container-fluid">
+      <div className="relative container-fluid ">
         <div className="row w-full justify-center">
           <div className="mx-auto col-sm-7 col-md-7 col-9">
             <div className="timeline alt"></div>
-            <small className="section-title bullet-title alt">
+            <small className="text_timeline-title bullet-title alt">
               Contact<span className="ml-1">/&gt;</span>
             </small>
 
             <div className="main-footer">
-              <h2 className="social-title">Find me on:</h2>
+              <h2 className="text_contact-title">Find me on:</h2>
               <div className="w-full my-4 social-wrp">
                 <a
-                  className="social-link flex items-end mb-4"
+                  className="social-link flex items-start"
                   href="https://www.linkedin.com/in/ashkan-rahnavardi/"
                   target="_blank"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="36px"
-                    height="36px"
-                    viewBox="0 0 64 64"
+                    viewBox="0 0 20 20"
+                    className="w-9 h-9 md:w-9 md:h-9 shrink-0 text-[#5918df]" // no-shrink and size
                   >
-                    <title>Linkedin</title>
-                    <desc>A line styled icon from Orion Icon Library.</desc>
                     <path
-                      data-name="layer1"
+                      d="M5 3c0 1.062-0.71 1.976-2.001 1.976-1.215 0-1.999-0.862-1.999-1.924 0-1.090 0.76-2.052 2-2.052s1.976 0.91 2 2zM1 19v-13h4v13h-4z"
                       fill="currentColor"
-                      stroke="#202020"
-                      strokeLinecap="round"
-                      strokeMiterlimit="10"
-                      strokeWidth="2"
-                      d="M3.078 22.331h12.188v36.844H3.078z"
-                      strokeLinejoin="round"
-                    ></path>
+                    />
                     <path
-                      data-name="layer2"
-                      d="M46.719 21.112c-5.344 0-8.531 1.969-11.906 6.281v-5.062H22.625v36.844h12.281V39.206c0-4.219 2.156-8.344 7.031-8.344s7.781 4.125 7.781 8.25v20.063H62V38.269c0-14.532-9.844-17.157-15.281-17.157z"
+                      d="M7 10.444c0-1.545-0.051-2.836-0.102-3.951h3.594l0.178 1.723h0.076c0.506-0.811 1.746-2 3.822-2 2.532 0 4.432 1.695 4.432 5.342v7.442h-4v-6.861c0-1.594-0.607-2.81-2-2.81-1.062 0-1.594 0.86-1.873 1.569-0.102 0.254-0.127 0.608-0.127 0.963v7.139h-4v-8.556z"
                       fill="currentColor"
-                      stroke="#202020"
-                      strokeLinecap="round"
-                      strokeMiterlimit="10"
-                      strokeWidth="2"
-                      strokeLinejoin="round"
-                    ></path>
-                    <path
-                      data-name="layer1"
-                      d="M9.219 4.425C5.188 4.425 2 7.331 2 10.894s3.188 6.469 7.219 6.469 7.219-2.906 7.219-6.469-3.188-6.469-7.219-6.469z"
-                      fill="currentColor"
-                      stroke="#202020"
-                      strokeLinecap="round"
-                      strokeMiterlimit="10"
-                      strokeWidth="2"
-                      strokeLinejoin="round"
-                    ></path>
+                    />
                   </svg>
+
                   <span className="ml-2">in/ashkan.rahnavardi</span>
                 </a>
                 <a
-                  className="social-link flex items-end mb-4"
+                  className="social-link flex items-start"
                   href="https://github.com/ashkan-rahnavardi"
                   target="_blank"
                 >
                   <svg
-                    xmlns="http://www.w3.org/2000/svg"
                     version="1.1"
-                    width="36px"
-                    height="36px"
-                    viewBox="0 0 64 64"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    className="w-9 h-9 md:w-9 md:h-9 shrink-0 text-[#5918df]" // no-shrink and size
+                    viewBox="0 0 32 32"
                   >
-                    <title>Github</title>
-                    <desc>A solid styled icon from Orion Icon Library.</desc>
                     <path
-                      data-name="layer2"
-                      d="M32 0a32.021 32.021 0 0 0-10.1 62.4c1.6.3 2.2-.7 2.2-1.5v-6c-8.9 1.9-10.8-3.8-10.8-3.8-1.5-3.7-3.6-4.7-3.6-4.7-2.9-2 .2-1.9.2-1.9 3.2.2 4.9 3.3 4.9 3.3 2.9 4.9 7.5 3.5 9.3 2.7a6.93 6.93 0 0 1 2-4.3c-7.1-.8-14.6-3.6-14.6-15.8a12.27 12.27 0 0 1 3.3-8.6 11.965 11.965 0 0 1 .3-8.5s2.7-.9 8.8 3.3a30.873 30.873 0 0 1 8-1.1 30.292 30.292 0 0 1 8 1.1c6.1-4.1 8.8-3.3 8.8-3.3a11.965 11.965 0 0 1 .3 8.5 12.1 12.1 0 0 1 3.3 8.6c0 12.3-7.5 15-14.6 15.8a7.746 7.746 0 0 1 2.2 5.9v8.8c0 .9.6 1.8 2.2 1.5A32.021 32.021 0 0 0 32 0z"
                       fill="currentColor"
-                    ></path>
-                    <path
-                      data-name="layer1"
-                      d="M12.1 45.9c-.1.2-.3.2-.5.1s-.4-.3-.3-.5.3-.2.6-.1c.2.2.3.4.2.5zm1.3 1.5a.589.589 0 0 1-.8-.8.631.631 0 0 1 .7.1.494.494 0 0 1 .1.7zm1.3 1.8a.585.585 0 0 1-.7-.3.6.6 0 0 1 0-.8.585.585 0 0 1 .7.3c.2.3.2.7 0 .8zm1.7 1.8c-.2.2-.5.1-.8-.1-.3-.3-.4-.6-.2-.8a.619.619 0 0 1 .8.1.554.554 0 0 1 .2.8zm2.4 1c-.1.3-.4.4-.8.3s-.6-.4-.5-.7.4-.4.8-.3c.3.2.6.5.5.7zm2.6.2c0 .3-.3.5-.7.5s-.7-.2-.7-.5.3-.5.7-.5c.4.1.7.3.7.5zm2.4-.4q0 .45-.6.6a.691.691 0 0 1-.8-.3q0-.45.6-.6c.5-.1.8.1.8.3z"
-                      fill="currentColor"
+                      d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"
                     ></path>
                   </svg>
-                  <span className="ml-2">github.com/ashkan-rahnavardi</span>
+                  <span className="ml-2 break-all">
+                    github.com/ashkan-rahnavardi
+                  </span>
                 </a>
                 <a
-                  className="social-link flex items-end mb-4"
+                  className="social-link flex items-start"
                   href="mailto: ashkan.rahnavardi@gmail.com"
                 >
                   <svg
@@ -97,6 +68,7 @@ function Contact() {
                     width="36px"
                     height="36px"
                     viewBox="0 0 64 64"
+                    className="w-9 h-9 md:w-9 md:h-9 shrink-0 text-[#5918df]" // no-shrink and size
                   >
                     <title>Envelope</title>
                     <desc>A line styled icon from Orion Icon Library.</desc>
@@ -105,7 +77,7 @@ function Contact() {
                       fill="none"
                       stroke="currentColor"
                       strokeMiterlimit="10"
-                      strokeWidth="2"
+                      strokeWidth="4"
                       d="M2 12l30 27.4L62 12"
                       strokeLinejoin="round"
                       strokeLinecap="round"
@@ -115,14 +87,14 @@ function Contact() {
                       fill="none"
                       stroke="currentColor"
                       strokeMiterlimit="10"
-                      strokeWidth="2"
+                      strokeWidth="4"
                       d="M2 12h60v40H2z"
                       strokeLinejoin="round"
                       strokeLinecap="round"
                     ></path>
                   </svg>
 
-                  <span className="ml-2 word-break">
+                  <span className="ml-2 break-all">
                     ashkan.rahnavardi@gmail.com
                   </span>
                 </a>

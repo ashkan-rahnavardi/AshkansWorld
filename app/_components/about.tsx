@@ -6,11 +6,11 @@ function About() {
       <div className="row w-full self-top items-start justify-center">
         <div className="pt-0 col-sm-9 col-md-9 offset-sm-2 col-10 offset-1">
           <div className="timeline alt"></div>
-          <small className="section-title bullet-title alt">
+          <small className="text_timeline-title bullet-title alt">
             About<span className="ml-1">/&gt;</span>
           </small>
 
-          <div className="mt-3 font-jetbrains text-base text-primary">
+          <div className="mt-4 mb-8 font-jetbrains text-base text-primary">
             <div className="code" data-line-nr="01">
               <div className="methods">class</div>
               <span className="propname"> Ashkan Rahnavardi </span>

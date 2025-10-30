@@ -43,7 +43,7 @@ function Start() {
               }
             >
               <span className="block-reveal__block white"></span>
-              <small className="section-title block-reveal__text section-start">
+              <small className="text_timeline-title block-reveal__text section-start">
                 Start<span className="ml-1">/&gt;</span>
               </small>
             </div>
@@ -51,9 +51,9 @@ function Start() {
 
             <div className="block-reveal block-reveal--active">
               <span className="block-reveal__block"></span>
-              <h1 className="block-reveal__text subtitle mb-0">
+              <h1 className="block-reveal__text text_start_main mb-0">
                 Hi, my name is{" "}
-                <strong className="text-purple font-extrabold">
+                <strong className="text-purple font-black">
                   Ashkan Rahnavardi
                 </strong>
                 <br></br>
@@ -67,7 +67,7 @@ function Start() {
               }
             >
               <span className="block-reveal__block"></span>
-              <h1 className="block-reveal__text subtitle mt-0 ws-nowrap">
+              <h1 className="block-reveal__text text_start_main mt-0 ws-nowrap">
                 I <em className="font-serif font-normal">design</em> and{" "}
                 <span className="font-mono font-bold">develop</span>{" "}
                 <br className="newline" />
@@ -82,7 +82,7 @@ function Start() {
               }
             >
               <span className="block-reveal__block white"></span>
-              <p className="text-primaryGray block-reveal__text section-showyou">
+              <p className="text_start_sub block-reveal__text section-showyou">
                 Let me show you...
               </p>
             </div>

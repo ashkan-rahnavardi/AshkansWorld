@@ -40,20 +40,28 @@ export function ProjectCard({ project }: { project: Project }) {
         glareMaxOpacity={0.45}
         scale={1.02}
         className={`relative block z-10 parallax-effect ${bgSize}`}
-        style={{
-          backgroundImage: `url(${imageUrl})`,
-          backgroundSize: "contain",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-        }}
       >
-        <div className="absolute bottom-0 text-primary inner-element -left-20 md:-left-8 w-24">
-          <h3 className="whitespace-nowrap">{title1}</h3>
+        <div
+          className="absolute inset-0 opacity-60"
+          style={{
+            backgroundImage: `url(${imageUrl})`,
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
+        ></div>
+        <div className="absolute bottom-0 text-primary inner-element -left-14 md:-left-8 w-24">
+          <h3 className="whitespace-nowrap text_work_project-title">
+            {title1}
+          </h3>
           {/* <h3>{title2 || "\u00A0"}</h3> */}
-          <h3>{title2}</h3>
-          <div className="h-1 bg-primary my-2"></div>
-          <p className="text-primaryGray font-mono text-lg">{num}</p>
-          <p className="text-primaryGray font-mono text-lg">→</p>
+          <h3 className="whitespace-nowrap text_work_project-title">
+            {title2}
+          </h3>
+          <div className=" bg-primary divider-line "></div>
+          {/* <p className="text-primaryGray font-mono text-lg">{num}</p> */}
+          <p className="text_work_project-number">{num}</p>
+          <p className="text_work_project-number">→</p>
         </div>
       </Tilt>
     </Link>

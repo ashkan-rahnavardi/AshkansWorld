@@ -8,9 +8,15 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
+      mono: [
+        "JetBrains Mono",
+        "ui-monospace",
+        "SFMono-Regular",
+        "Menlo",
+        "monospace",
+      ],
       roboto: ["Roboto Condensed", "sans-serif"],
       serif: ["Palatino", "Georgia", "Times New Roman"],
-      mono: ["Roboto Mono", "Courier New", "Courier"],
       jetbrains: ["JetBrains Mono", "ui-monospace", "monospace"],
     },
     extend: {
