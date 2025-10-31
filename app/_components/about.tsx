@@ -176,16 +176,11 @@ function About() {
             </div>
             <div className="code" data-line-nr="25">
               <div className="dot">......</div>
-              <span className="key">Languages &#38; Markup</span>
+              <span className="key">Languages</span>
               &#58; &#91;
-              <span className="string">
-                {" "}
-                &#39;TypeScript/JavaScript (ES6+)&#39;
-              </span>
-              ,<span className="string"> &#39;PHP&#39;</span>,
+              <span className="string"> &#39;TS/JS (ES6+)&#39;</span>,
+              <span className="string"> &#39;PHP&#39;</span>,
               <span className="string"> &#39;Python&#39;</span>,
-              <span className="string"> &#39;HTML5&#39;</span>,
-              <span className="string"> &#39;CSS3/Sass&#39;</span>,
               <span className="string"> &#39;Farsi&#39;</span>,
               <span className="string"> &#39;English&#39;</span>
               &#93;,
@@ -196,53 +191,45 @@ function About() {
               &#58; &#91;
               <span className="string"> &#39;React&#39;</span>,
               <span className="string"> &#39;Next.js&#39;</span>,
-              <span className="string"> &#39;Node.js&#39;</span>,
-              <span className="string"> &#39;WordPresss&#39;</span>,
-              <span className="string"> &#39;WooCommerce&#39;</span>,
-              <span className="string"> &#39;Konva.js&#39;</span>,
-              <span className="string"> &#39;Express&#39;</span>
+              <span className="string"> &#39;Laravel&#39;</span>,
+              <span className="string"> &#39;WordPress&#39;</span>,
+              <span className="string"> &#39;WooCommerce&#39;</span>
               &#93;,
             </div>
             <div className="code" data-line-nr="27">
               <div className="dot">......</div>
-              <span className="key">Databases &#38; Data</span>
+              <span className="key">Databases</span>
               &#58; &#91;
               <span className="string"> &#39;PostgreSQL&#39;</span>,
               <span className="string"> &#39;MySQL&#39;</span>,
-              <span className="string"> &#39;MongoDB&#39;</span>,
-              <span className="string"> &#39;JSON&#39;</span>,
-              <span className="string"> &#39;REST/GraphQL APIs&#39;</span>
+              <span className="string"> &#39;MongoDB&#39;</span>
               &#93;,
             </div>
             <div className="code" data-line-nr="28">
               <div className="dot">......</div>
-              <span className="key">DevOps &#38; Data</span>
+              <span className="key">Cloud &#38; DevOps</span>
               &#58; &#91;
               <span className="string">
                 {" "}
-                &#39;AWS(EC2, S3, Route 53, IAM)&#39;
+                &#39;AWS (EC2, S3, Route 53, IAM)&#39;
               </span>
               ,
               <span className="string">
                 {" "}
                 &#39;Docker &#38; Docker Compose&#39;
               </span>
-              , <span className="string">
-                {" "}
-                &#39;Github Actions CI/CD&#39;
-              </span>,{" "}
-              <span className="string"> &#39;Linux (NixOS/Arch)&#39;</span>,
-              <span className="string"> &#39;SSL/TLS&#39;</span>&#93;,
+              , <span className="string"> &#39;GitHub Actions CI/CD&#39;</span>
+              &#93;,
             </div>
             <div className="code" data-line-nr="29">
               <div className="dot">......</div>
-              <span className="key">Integrations &#38; Tooling</span>
+              <span className="key">Tools</span>
               &#58; &#91;
-              <span className="string"> &#39;QuickBooks SDK&#39;</span>,
-              <span className="string"> &#39;inFlow Inventory&#39;</span>,
-              <span className="string"> &#39;Zapier webhooks&#39;</span>,
-              <span className="string"> &#39;Jira&#39;</span>,
-              <span className="string"> &#39;Git/GitFlow&#39;</span>&#93;
+              <span className="string"> &#39;Linux (NixOS)&#39;</span>,
+              <span className="string"> &#39;Neovim&#39;</span>,
+              <span className="string"> &#39;Obsidian&#39;</span>,
+              <span className="string"> &#39;Photoshop&#39;</span>,
+              <span className="string"> &#39;Figma&#39;</span>&#93;
               <span className="cursor"></span>
             </div>
             <div className="code" data-line-nr="30">
