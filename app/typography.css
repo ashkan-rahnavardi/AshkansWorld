@@ -60,6 +60,7 @@ body {
 }
 
 .text_nav_link {
+  color: rgba(255, 255, 255, 0.5);
   font-size: 22px;
   font-weight: 700;
   line-height: 1.5;
