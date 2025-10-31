@@ -22,7 +22,7 @@ const professionalProjects: Project[] = [
     title2: "Brands",
     num: "01",
     route: "/projects/RTBBrands",
-    classes: "col-sm-10 col-md-4 mt-2 md:mt-20",
+    classes: "col-sm-10 col-md-4 mt-4 md:mt-20",
     dataCycleCount: "4",
   },
 ];
