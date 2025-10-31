@@ -22,7 +22,7 @@ const professionalProjects: Project[] = [
     title2: "Brands",
     num: "01",
     route: "/projects/RTBBrands",
-    classes: "col-sm-10 col-md-4 mt-0 md:mt-20",
+    classes: "col-sm-10 col-md-4 mt-2 md:mt-20",
     dataCycleCount: "4",
   },
 ];
@@ -36,7 +36,7 @@ const personalProjects: Project[] = [
     title2: "Grabber",
     num: "02",
     route: "/projects/Plate-Grabber",
-    classes: "col-sm-10 col-md-5",
+    classes: "col-sm-10 col-md-5 mt-2",
     dataCycleCount: "3",
   },
   {
@@ -47,7 +47,7 @@ const personalProjects: Project[] = [
     title2: "",
     num: "03",
     route: "/projects/SotBy",
-    classes: "col-sm-10 col-md-4",
+    classes: "col-sm-10 col-md-4 mt-2",
     dataCycleCount: "1",
   },
   {
@@ -58,7 +58,7 @@ const personalProjects: Project[] = [
     title2: "Finder",
     num: "04",
     route: "/projects/WayFinder",
-    classes: "col-sm-10 col-md-3",
+    classes: "col-sm-10 col-md-3 mt-2",
     dataCycleCount: "2",
   },
 ];
