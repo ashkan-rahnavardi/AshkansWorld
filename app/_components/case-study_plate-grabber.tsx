@@ -21,11 +21,11 @@ export default function PlateGrabberCaseStudy() {
           </span>
         </p>
 
-        <h1 className="">
+        <h1 className="text-display-md mb-4">
           PlateGrabber — License Plate Extraction Tool for City Workflows
         </h1>
 
-        <div className="projectDescription mb-8">
+        <div className="mb-4 text-body">
           <ul>
             <li>
               <span className="font-bold">Role:</span> Solo Developer
@@ -52,14 +52,15 @@ export default function PlateGrabberCaseStudy() {
           <span className="chip">🗄️ MongoDB</span>
         </div>
 
-        <section className="projectDescription_text pt-4">
-          <span className="text-2xl font-extrabold">📖 Project Overview</span>
-          <br />
-          PlateGrabber is a web app designed for the City of Vancouver Traffic
-          Department to capture parked-vehicle photos and automatically extract
-          license plate numbers and geolocation data, replacing manual
-          pen-and-paper workflows. I initiated and built the project after
-          observing inefficiencies in the existing process.
+        <section className="projectDescription_text pt-8">
+          <h2 className="text-h2 mb-2">📖 Project Overview</h2>
+          <p className="text-body">
+            PlateGrabber is a web app designed for the City of Vancouver Traffic
+            Department to capture parked-vehicle photos and automatically
+            extract license plate numbers and geolocation data, replacing manual
+            pen-and-paper workflows. I initiated and built the project after
+            observing inefficiencies in the existing process.
+          </p>
         </section>
 
         <section aria-label="Key results">
@@ -81,54 +82,54 @@ export default function PlateGrabberCaseStudy() {
           </div>
         </section>
 
-        <section className="projectDescription_text pt-4">
-          <span className="text-2xl font-extrabold">❌ Problem</span>
-          <ul className="list-disc list-inside pl-4">
-            <li>
+        <section className="projectDescription_text pt-8">
+          <h2 className="text-h2 mb-2">❌ Problem</h2>
+          <ul className="list-disc list-inside text-body pl-2">
+            <li className="mb-1">
               Traffic staff installing No Parking signs had to record all parked
               vehicles.
             </li>
-            <li>
+            <li className="mb-1">
               Plates were written manually on paper, causing slow, error-prone,
               duplicate data entry.
             </li>
           </ul>
         </section>
 
-        <section className="projectDescription_text pt-4">
-          <span className="text-2xl font-extrabold">💡 Solution</span>
-          <br />A streamlined capture flow that lets staff take photos in-app,
-          extracts plate numbers via OCR, attaches photo geolocation metadata to
-          auto-fill forms, and keeps the system modular for future assignment
-          workflows.
+        <section className="projectDescription_text pt-8">
+          <h2 className="text-h2 mb-2">💡 Solution</h2>
+          <p className="text-body">
+            A streamlined capture flow that lets staff take photos in-app,
+            extracts plate numbers via OCR, attaches photo geolocation metadata
+            to auto-fill forms, and keeps the system modular for future
+            assignment workflows.
+          </p>
         </section>
 
         <section className="projectDescription_text">
-          <span className="text-xl font-bold">
-            ⚙️ Core Product Capabilities
-          </span>
-          <ul className="list-disc list-inside pl-4">
-            <li>
+          <h3 className="text-h3 mb-2">⚙️ Core Product Capabilities</h3>
+          <ul className="list-disc list-inside pl-2 text-body">
+            <li className="mb-1">
               <span className="font-bold">Photo capture:</span> in-app camera
               with capture preview.
             </li>
-            <li>
+            <li className="mb-1">
               <span className="font-bold">Plate extraction:</span> OCR pipeline
               to parse license numbers.
             </li>
-            <li>
+            <li className="mb-1">
               <span className="font-bold">Geo tagging:</span> read location
               metadata and attach to records.
             </li>
-            <li>
+            <li className="mb-1">
               <span className="font-bold">Auto-fill:</span> populate traffic
               forms from extracted data.
             </li>
-            <li>
+            <li className="mb-1">
               <span className="font-bold">Security (planned):</span> encrypted,
               on-prem storage.
             </li>
-            <li>
+            <li className="mb-1">
               <span className="font-bold">Assignments (planned):</span> daily
               dashboard for staff tasks.
             </li>
@@ -136,73 +137,72 @@ export default function PlateGrabberCaseStudy() {
         </section>
 
         <section className="projectDescription_text">
-          <span className="text-xl font-extrabold">🙋 My Contributions</span>
-          <ul className="list-disc list-inside pl-4">
-            <li>Built the React/Next.js frontend and ShadCN UI flows.</li>
-            <li>
+          <h3 className="text-h3 mb-2">🙋 My Contributions</h3>
+          <ul className="list-disc list-inside pl-2 text-body">
+            <li className="mb-1">
+              Built the React/Next.js frontend and ShadCN UI flows.
+            </li>
+            <li className="mb-1">
               Integrated camera capture (React Camera Pro, custom
               modifications).
             </li>
-            <li>
+            <li className="mb-1">
               Connected OCR plate recognition and geolocation metadata to form
               auto-fill.
             </li>
-            <li>
+            <li className="mb-1">
               Prototyped auth with NextAuth and scoped security for on-prem
               requirements.
             </li>
-            <li>
+            <li className="mb-1">
               Ran discovery with the department superintendent and iterated
               across two sprints.
             </li>
           </ul>
         </section>
 
-        <section className="pt-4" aria-label="Architecture">
+        <section className="pt-8" aria-label="Architecture">
           <div className="projectDescription_text">
-            <span className="text-2xl font-extrabold">
-              🏗️ Architecture & Stack
-            </span>
-            <ul>
+            <h2 className="text-h2 mb-2">🏗️ Architecture &amp; Stack</h2>
+            <ul className="text-caption">
               <li>
-                <span className="font-bold">Frontend:</span> React,
+                <span className="font-bold text-body">Frontend:</span> React,
                 Next.js&nbsp;14, ShadCN UI
               </li>
               <li>
-                <span className="font-bold">Authentication:</span> NextAuth v5
+                <span className="font-bold text-body">Authentication:</span>{" "}
+                NextAuth v5
               </li>
               <li>
-                <span className="font-bold">Database:</span> MongoDB (prototype
-                stage)
+                <span className="font-bold text-body">Database:</span> MongoDB
+                (prototype stage)
               </li>
               <li>
-                <span className="font-bold">APIs:</span> Plate Recognition
-                (OCR), geolocation metadata
+                <span className="font-bold text-body">APIs:</span> Plate
+                Recognition (OCR), geolocation metadata
               </li>
               <li>
-                <span className="font-bold">Camera:</span> React Camera Pro
-                (custom-modified)
+                <span className="font-bold text-body">Camera:</span> React
+                Camera Pro (custom-modified)
               </li>
             </ul>
           </div>
 
           <div className="projectDescription_text">
-            <span className="text-xl font-extrabold">
-              🤔 Why this approach?
-            </span>
-            <ul className="list-disc list-inside pl-4">
-              <li>
+            <h3 className="text-h3 mb-2">🤔 Why this approach?</h3>
+            <ul className="list-disc list-inside pl-2 text-body">
+              <li className="mb-1">
                 Direct photo capture and OCR eliminate manual, duplicate entry.
               </li>
-              <li>
+              <li className="mb-1">
                 Geolocation metadata ties evidence to place and time with
                 minimal effort.
               </li>
-              <li>
+              <li className="mb-1">
                 Modular design keeps a path open for secure, on-prem deployment
                 and future workflows.
               </li>
-              <li>
+              <li className="mb-1">
                 Modern React/Next stack sped up iteration while keeping the
                 prototype maintainable.
               </li>
@@ -210,18 +210,18 @@ export default function PlateGrabberCaseStudy() {
           </div>
         </section>
 
-        <section className="projectDescription_text pt-4">
-          <span className="text-2xl font-extrabold">🏆 Outcomes</span>
-          <ul className="list-disc list-inside pl-4">
-            <li>
+        <section className="projectDescription_text pt-8">
+          <h2 className="text-h2 mb-2">🏆 Outcomes</h2>
+          <ul className="list-disc list-inside pl-2 text-body">
+            <li className="mb-1">
               Demonstrated the MVP to the department superintendent and
               assistant with strong interest.
             </li>
-            <li>
+            <li className="mb-1">
               Identified adoption hurdles around IT policy compliance and
               procurement.
             </li>
-            <li>
+            <li className="mb-1">
               Project paused before commercial rollout, but validated automation
               feasibility.
             </li>
@@ -229,22 +229,20 @@ export default function PlateGrabberCaseStudy() {
         </section>
 
         <section className="projectDescription_text">
-          <span className="text-xl font-extrabold">
-            📓 Process Notes & Lessons
-          </span>
-          <ul className="list-disc list-inside pl-4">
-            <li>
+          <h3 className="text-h3">📓 Process Notes &amp; Lessons</h3>
+          <ul className="list-disc list-inside pl-2 text-body">
+            <li className="mb-1">
               Applied OCR and geolocation APIs in a real-world municipal
               workflow.
             </li>
-            <li>
+            <li className="mb-1">
               Architecture planning is crucial for scalability and compliance.
             </li>
-            <li>
+            <li className="mb-1">
               Stakeholder discovery with non-technical managers guided scope and
               roadmap.
             </li>
-            <li>
+            <li className="mb-1">
               If rebuilding today: define a 2-year roadmap, build modular from
               day one, and prioritize on-prem encryption.
             </li>
@@ -290,7 +288,7 @@ export default function PlateGrabberCaseStudy() {
           </svg>
           <span className="ml-2">View on Github</span>
         </a>
-        <div className="divider-line text-primary">02</div>
+        <div className="divider-line-proj text-primary">02</div>
       </div>
     </div>
   );

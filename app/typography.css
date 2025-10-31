@@ -70,9 +70,13 @@ body {
   color: rgba(255, 255, 255, 0.75);
 }
 
+.text_nav_link.active {
+  color: rgba(255, 255, 255, 1);
+}
+
 .text_timeline-title {
   color: rgb(152, 142, 159);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.5;
 }

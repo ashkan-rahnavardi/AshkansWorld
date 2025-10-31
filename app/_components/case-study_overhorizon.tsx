@@ -284,7 +284,7 @@ export default function OverHorizonCaseStudy() {
         </div>
       </div>
 
-      <div className="divider-line text-primary mt-4">00</div>
+      <div className="divider-line-proj text-primary mt-4">00</div>
     </div>
   );
 }

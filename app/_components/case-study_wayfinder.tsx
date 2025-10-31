@@ -17,9 +17,11 @@ export default function WayFinderCaseStudy() {
           </span>
         </p>
 
-        <h1 className="">BCIT WayFinder — Campus Navigation App</h1>
+        <h1 className="text-display-md mb-4">
+          BCIT WayFinder — Campus Navigation App
+        </h1>
 
-        <div className="projectDescription mb-8">
+        <div className="mb-4 text-body">
           <ul>
             <li>
               <span className="font-bold">Role:</span> Student Developer
@@ -47,13 +49,15 @@ export default function WayFinderCaseStudy() {
           <span className="chip">🐍 Python</span>
         </div>
 
-        <section className="projectDescription_text pt-4">
-          <span className="text-2xl font-extrabold">📖 Project Overview</span>
-          <br />
-          BCIT WayFinder is a campus navigation app for the BCIT Burnaby campus.
-          It helps students, staff, and visitors navigate footpaths and
-          buildings where Google Maps lacks coverage. I led the React frontend
-          while teammates handled data extraction and backend integrations.
+        <section className="projectDescription_text pt-8">
+          <h2 className="text-h2 mb-2">📖 Project Overview</h2>
+          <p className="text-body">
+            BCIT WayFinder is a campus navigation app for the BCIT Burnaby
+            campus. It helps students, staff, and visitors navigate footpaths
+            and buildings where Google Maps lacks coverage. I led the React
+            frontend while teammates handled data extraction and backend
+            integrations.
+          </p>
         </section>
 
         <section aria-label="Key results">
@@ -75,44 +79,47 @@ export default function WayFinderCaseStudy() {
           </div>
         </section>
 
-        <section className="projectDescription_text pt-4">
-          <span className="text-2xl font-extrabold">❌ Problem</span>
-          <ul className="list-disc list-inside pl-4">
-            <li>Google Maps lacks BCIT’s internal footpath network.</li>
-            <li>
+        <section className="projectDescription_text pt-8">
+          <h2 className="text-h2 mb-2">❌ Problem</h2>
+          <ul className="list-disc list-inside text-body pl-2">
+            <li className="mb-1">
+              Google Maps lacks BCIT’s internal footpath network.
+            </li>
+            <li className="mb-1">
               New students and visitors struggle to route between classes,
               including through buildings.
             </li>
           </ul>
         </section>
 
-        <section className="projectDescription_text pt-4">
-          <span className="text-2xl font-extrabold">💡 Solution</span>
-          <br />A React web app with a familiar mapping UI, geolocation to show
-          current position, an autocomplete search for buildings and amenities,
-          and custom routing based on a campus PDF converted into nodes and
-          intersections. We computed shortest paths with Dijkstra’s algorithm
-          and rendered routes with building info and color-coded markers.
+        <section className="projectDescription_text pt-8">
+          <h2 className="text-h2 mb-2">💡 Solution</h2>
+          <p className="text-body">
+            A React web app with a familiar mapping UI, geolocation to show
+            current position, an autocomplete search for buildings and
+            amenities, and custom routing based on a campus PDF converted into
+            nodes and intersections. We computed shortest paths with Dijkstra’s
+            algorithm and rendered routes with building info and color-coded
+            markers.
+          </p>
         </section>
 
         <section className="projectDescription_text">
-          <span className="text-xl font-bold">
-            ⚙️ Core Product Capabilities
-          </span>
-          <ul className="list-disc list-inside pl-4">
-            <li>
+          <h3 className="text-h3 mb-2">⚙️ Core Product Capabilities</h3>
+          <ul className="list-disc list-inside pl-2 text-body">
+            <li className="mb-1">
               <span className="font-bold">Geolocation:</span> display current
               user position on campus.
             </li>
-            <li>
+            <li className="mb-1">
               <span className="font-bold">Search & Autocomplete:</span>{" "}
               buildings and amenities with instant suggestions.
             </li>
-            <li>
+            <li className="mb-1">
               <span className="font-bold">Routing:</span> shortest path using
               preprocessed footpath graph.
             </li>
-            <li>
+            <li className="mb-1">
               <span className="font-bold">POI Details:</span> building info
               cards and markers.
             </li>
@@ -120,57 +127,61 @@ export default function WayFinderCaseStudy() {
         </section>
 
         <section className="projectDescription_text">
-          <span className="text-xl font-extrabold">🙋 My Contributions</span>
-          <ul className="list-disc list-inside pl-4">
-            <li>
+          <h3 className="text-h3 mb-2">🙋 My Contributions</h3>
+          <ul className="list-disc list-inside pl-2 text-body">
+            <li className="mb-1">
               Implemented the React frontend (layout, components, Material UI).
             </li>
-            <li>
+            <li className="mb-1">
               Integrated map view, geolocation, and destination search UX.
             </li>
-            <li>
+            <li className="mb-1">
               Hooked frontend to JSON route data and rendered paths/markers.
             </li>
-            <li>Coordinated UI with teammates’ data extraction and APIs.</li>
+            <li className="mb-1">
+              Coordinated UI with teammates’ data extraction and APIs.
+            </li>
           </ul>
         </section>
 
-        <section className="pt-4" aria-label="Architecture">
+        <section className="pt-8" aria-label="Architecture">
           <div className="projectDescription_text">
-            <span className="text-2xl font-extrabold">
-              🏗️ Architecture & Stack
-            </span>
-            <ul>
+            <h2 className="text-h2 mb-2">🏗️ Architecture &amp; Stack</h2>
+            <ul className="text-caption">
               <li>
-                <span className="font-bold">Frontend:</span> React, Material UI
+                <span className="font-bold text-body">Frontend:</span> React,
+                Material UI
               </li>
               <li>
-                <span className="font-bold">APIs:</span> Google Maps API
-                (geolocation, coordinates)
+                <span className="font-bold text-body">APIs:</span> Google Maps
+                API (geolocation, coordinates)
               </li>
               <li>
-                <span className="font-bold">Backend/Data:</span> Python for
-                footpath extraction, Dijkstra shortest path, JSON generation
+                <span className="font-bold text-body">Backend/Data:</span>{" "}
+                Python for footpath extraction, Dijkstra shortest path, JSON
+                generation
               </li>
               <li>
-                <span className="font-bold">Hosting:</span> Free static hosting
-                (prototype demo)
+                <span className="font-bold text-body">Hosting:</span> Free
+                static hosting (prototype demo)
               </li>
             </ul>
           </div>
 
           <div className="projectDescription_text">
-            <span className="text-xl font-extrabold">
-              🤔 Why this approach?
-            </span>
-            <ul className="list-disc list-inside pl-4">
-              <li>Leverages familiar map UX to reduce onboarding friction.</li>
-              <li>
+            <h3 className="text-h3 mb-2">🤔 Why this approach?</h3>
+            <ul className="list-disc list-inside pl-2 text-body">
+              <li className="mb-1">
+                Leverages familiar map UX to reduce onboarding friction.
+              </li>
+              <li className="mb-1">
                 Custom footpath graph enables accurate on-campus routing that
                 Google lacks.
               </li>
-              <li>Lightweight prototype stack fit a 4-week delivery window.</li>
-              <li>
+              <li className="mb-1">
+                Lightweight prototype stack fit a 4-week delivery window.
+              </li>
+              <li className="mb-1">
                 Separation of concerns (data processing ➡️ JSON; UI ➡️ React)
                 eased iteration.
               </li>
@@ -178,37 +189,41 @@ export default function WayFinderCaseStudy() {
           </div>
         </section>
 
-        <section className="projectDescription_text pt-4">
-          <span className="text-2xl font-extrabold">🏆 Outcomes</span>
-          <ul className="list-disc list-inside pl-4">
-            <li>Deployed and demoed live (prototype; link later disabled).</li>
-            <li>
+        <section className="projectDescription_text pt-8">
+          <h2 className="text-h2 mb-2">🏆 Outcomes</h2>
+          <ul className="list-disc list-inside pl-2 text-body">
+            <li className="mb-1">
+              Deployed and demoed live (prototype; link later disabled).
+            </li>
+            <li className="mb-1">
               Presented at BCIT’s Digital Transformation / Digital Twin Summit.
             </li>
-            <li>
+            <li className="mb-1">
               Helped spark funding interest for a commercial-grade navigation
               app.
             </li>
-            <li>Validated feasibility with a 3-student, 4-week MVP.</li>
+            <li className="mb-1">
+              Validated feasibility with a 3-student, 4-week MVP.
+            </li>
           </ul>
         </section>
 
         <section className="projectDescription_text">
-          <span className="text-xl font-extrabold">
-            📓 Process Notes & Lessons
-          </span>
-          <ul className="list-disc list-inside pl-4">
-            <li>First substantial use of React with component architecture.</li>
-            <li>
+          <h3 className="text-h3">📓 Process Notes &amp; Lessons</h3>
+          <ul className="list-disc list-inside pl-2 text-body">
+            <li className="mb-1">
+              First substantial use of React with component architecture.
+            </li>
+            <li className="mb-1">
               Project organization and directory structure matter for
               scalability.
             </li>
-            <li>
+            <li className="mb-1">
               Small-team collaboration: coordinated independent features with
               shared data.
             </li>
-            <li>
-              If rebuilt: cleaner app structure, real-time route data
+            <li className="mb-1">
+              If rebuilt today: cleaner app structure, real-time route data
               collection, and turn-by-turn navigation.
             </li>
           </ul>
@@ -249,7 +264,7 @@ export default function WayFinderCaseStudy() {
           </svg>
           <span className="ml-2">View on Github</span>
         </a>
-        <div className="divider-line text-primary">04</div>
+        <div className="divider-line-proj text-primary">04</div>
       </div>
     </div>
   );
