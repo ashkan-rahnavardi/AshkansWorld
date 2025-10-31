@@ -7,9 +7,32 @@ import "./typography.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const metaTitle = "<ASH/>";
+const metaDescription = "Ashkan Rahnavardi's Portfolio | Full-Stack Developer";
+
 export const metadata: Metadata = {
-  title: "ASH",
-  description: "Ashkan Rahnavardis personal website",
+  title: metaTitle,
+  description: metaDescription,
+  openGraph: {
+    title: metaTitle,
+    description: metaDescription,
+    images: [
+      {
+        url: "/ash.png",
+        width: 175,
+        height: 48,
+        alt: "ASH Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: metaTitle,
+    description: metaDescription,
+    images: ["/ash.png"],
+  },
 };
 
 export default function RootLayout({
@@ -21,8 +44,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/volcano-favicon.svg" type="image/svg+xml" />
 
-        <title>ASH</title>
+        <title>{metaTitle}</title>
       </head>
       <body className={inter.className}>
         <CustomCursorManager>{children}</CustomCursorManager>
