@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type LinkItem = { href: string; label: string };
 
@@ -18,6 +18,7 @@ const LINKS: LinkItem[] = [
 
 export default function NavBar(): JSX.Element {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("start");
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -26,6 +27,37 @@ export default function NavBar(): JSX.Element {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "-50% 0px -50% 0px",
+      threshold: 0,
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Observe all sections
+    LINKS.forEach(({ href }) => {
+      const sectionId = href.substring(1); // Remove the # from href
+      const section = document.getElementById(sectionId);
+      if (section) {
+        observer.observe(section);
+      }
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <nav className="p-4 absolute z-10 bg-transparent w-full">
@@ -43,12 +75,20 @@ export default function NavBar(): JSX.Element {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex space-x-4">
-          {LINKS.map(({ href, label }) => (
-            <a key={href} href={href} className="navbar-link">
-              {label}
-              <span className="navbar-link-suffix closing-tag">/&gt;</span>
-            </a>
-          ))}
+          {LINKS.map(({ href, label }) => {
+            const sectionId = href.substring(1);
+            const isActive = activeSection === sectionId;
+            return (
+              <a
+                key={href}
+                href={href}
+                className={`text_nav_link ${isActive ? "active" : ""}`}
+              >
+                {label}
+                <span className="navbar-link-suffix">/&gt;</span>
+              </a>
+            );
+          })}
         </div>
 
         {/* Mobile trigger */}
@@ -92,17 +132,21 @@ export default function NavBar(): JSX.Element {
           {/* Panel background (reuse your gradient + shadow class) */}
           <div className="navbar-dropdown px-4 pb-4 pt-2">
             <nav className="space-y-1">
-              {LINKS.map(({ href, label }) => (
-                <a
-                  key={href}
-                  href={href}
-                  onClick={closeMenu}
-                  className="block py-2 navbar-link"
-                >
-                  {label}
-                  <span className="navbar-link-suffix">/&gt;</span>
-                </a>
-              ))}
+              {LINKS.map(({ href, label }) => {
+                const sectionId = href.substring(1);
+                const isActive = activeSection === sectionId;
+                return (
+                  <a
+                    key={href}
+                    href={href}
+                    onClick={closeMenu}
+                    className={`block py-2 text_nav_link ${isActive ? "active" : ""}`}
+                  >
+                    {label}
+                    <span className="navbar-link-suffix">/&gt;</span>
+                  </a>
+                );
+              })}
             </nav>
           </div>
         </div>

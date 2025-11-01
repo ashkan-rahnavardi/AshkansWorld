@@ -22,7 +22,7 @@ const professionalProjects: Project[] = [
     title2: "Brands",
     num: "01",
     route: "/projects/RTBBrands",
-    classes: "col-sm-10 col-md-4 mt-20",
+    classes: "col-sm-10 col-md-4 mt-4 md:mt-20",
     dataCycleCount: "4",
   },
 ];
@@ -36,7 +36,7 @@ const personalProjects: Project[] = [
     title2: "Grabber",
     num: "02",
     route: "/projects/Plate-Grabber",
-    classes: "col-sm-10 col-md-5",
+    classes: "col-sm-10 col-md-5 mt-2",
     dataCycleCount: "3",
   },
   {
@@ -47,7 +47,7 @@ const personalProjects: Project[] = [
     title2: "",
     num: "03",
     route: "/projects/SotBy",
-    classes: "col-sm-10 col-md-4",
+    classes: "col-sm-10 col-md-4 mt-2",
     dataCycleCount: "1",
   },
   {
@@ -58,7 +58,7 @@ const personalProjects: Project[] = [
     title2: "Finder",
     num: "04",
     route: "/projects/WayFinder",
-    classes: "col-sm-10 col-md-3",
+    classes: "col-sm-10 col-md-3 mt-2",
     dataCycleCount: "2",
   },
 ];
@@ -72,12 +72,12 @@ export default function Work() {
       <div className="row w-full self-top items-start justify-center">
         <div className="mx-auto pt-0 col-sm-7 col-md-7 col-9">
           <div className="timeline alt"></div>
-          <small className="section-title bullet-title alt">
+          <small className="text_timeline-title bullet-title alt">
             Projects<span className="ml-1">/&gt;</span>
           </small>
 
-          <div className="text-primaryGray pb-4 md:pb-8">
-            <h4 className="">Freelance Portfolio</h4>
+          <div className="text_work_title pb-8 md:pb-4">
+            <h4>Freelance Portfolio</h4>
           </div>
         </div>
       </div>
@@ -93,12 +93,12 @@ export default function Work() {
       </div>
       <div className="row w-full self-top items-start justify-center">
         <div className="mx-auto pt-0 col-sm-7 col-md-7 col-9">
-          <div className="text-primaryGray">
+          <div className="text_work_title mt-5 mb-1">
             <h4 className="text-right">Independent Builds</h4>
           </div>
         </div>
       </div>
-      <div className="row self-top w-full pt-2 md:pt-3 mt-2 md:mt-3 projects-row">
+      <div className="row self-top w-full pt-3 projects-row mb-12">
         {personalProjects.map((p) => (
           <div
             key={p.route}

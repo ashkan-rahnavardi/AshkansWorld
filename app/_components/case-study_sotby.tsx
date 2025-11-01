@@ -25,11 +25,11 @@ export default function SotByCaseStudy() {
           </span>
         </p>
 
-        <h1 className="">
+        <h1 className="text-display-md mb-4">
           SotBy — Resource &amp; Schedule Management for BCIT Automotive
         </h1>
 
-        <div className="projectDescription mb-8">
+        <div className="mb-4 text-body">
           <ul>
             <li>
               <span className="font-bold">Role:</span> Student Developer
@@ -60,13 +60,14 @@ export default function SotByCaseStudy() {
           <span className="chip">🌀 Agile</span>
         </div>
 
-        <section className="projectDescription_text pt-4">
-          <span className="text-2xl font-extrabold">📖 Project Overview</span>
-          <br />
-          SotBy replaces a chaotic single-user Google Doc with a multi-user web
-          app for the BCIT Automotive Department. It adds authentication,
-          role-based permissions, real-time concurrent editing, drag-and-drop
-          scheduling, and auditable change history.
+        <section className="projectDescription_text pt-8">
+          <h2 className="text-h2 mb-2">📖 Project Overview</h2>
+          <p className="text-body">
+            SotBy replaces a chaotic single-user Google Doc with a multi-user
+            web app for the BCIT Automotive Department. It adds authentication,
+            role-based permissions, real-time concurrent editing, drag-and-drop
+            scheduling, and auditable change history.
+          </p>
         </section>
 
         <section aria-label="Key results">
@@ -88,45 +89,48 @@ export default function SotByCaseStudy() {
           </div>
         </section>
 
-        <section className="projectDescription_text pt-4">
-          <span className="text-2xl font-extrabold">❌ Problem</span>
-          <ul className="list-disc list-inside pl-4">
-            <li>Single shared Google Doc → only one editor at a time.</li>
-            <li>No audit trail of changes.</li>
-            <li>Frequent conflicts with resources & schedules.</li>
+        <section className="projectDescription_text pt-8">
+          <h2 className="text-h2 mb-2">❌ Problem</h2>
+          <ul className="list-disc list-inside text-body pl-2">
+            <li className="mb-1">
+              Single shared Google Doc → only one editor at a time.
+            </li>
+            <li className="mb-1">No audit trail of changes.</li>
+            <li className="mb-1">
+              Frequent conflicts with resources & schedules.
+            </li>
           </ul>
         </section>
 
-        <section className="projectDescription_text pt-4">
-          <span className="text-2xl font-extrabold">💡 Solution</span>
-          <br />A multi-user web application with secure login and roles,
-          real-time updates via Socket.IO, drag-and-drop schedule editing,
-          resource request/approval workflows, and a clear audit log of all
-          changes.
+        <section className="projectDescription_text pt-8">
+          <h2 className="text-h2 mb-2">💡 Solution</h2>
+          <p className="text-body">
+            A multi-user web application with secure login and roles, real-time
+            updates via Socket.IO, drag-and-drop schedule editing, resource
+            request/approval workflows, and a clear audit log of all changes.
+          </p>
         </section>
 
         <section className="projectDescription_text">
-          <span className="text-xl font-bold">
-            ⚙️ Core Product Capabilities
-          </span>
-          <ul className="list-disc list-inside pl-4">
-            <li>
+          <h3 className="text-h3 mb-2">⚙️ Core Product Capabilities</h3>
+          <ul className="list-disc list-inside pl-2 text-body">
+            <li className="mb-1">
               <span className="font-bold">Auth & RBAC:</span> admin vs regular
               permissions.
             </li>
-            <li>
+            <li className="mb-1">
               <span className="font-bold">Realtime:</span> concurrent edits via
               Socket.IO.
             </li>
-            <li>
+            <li className="mb-1">
               <span className="font-bold">Scheduling UI:</span> drag-and-drop
               calendar.
             </li>
-            <li>
+            <li className="mb-1">
               <span className="font-bold">Workflows:</span> resource & vacation
               requests.
             </li>
-            <li>
+            <li className="mb-1">
               <span className="font-bold">Auditability:</span> change history &
               transparency.
             </li>
@@ -134,74 +138,87 @@ export default function SotByCaseStudy() {
         </section>
 
         <section className="projectDescription_text">
-          <span className="text-xl font-extrabold">🙋 My Contributions</span>
-          <ul className="list-disc list-inside pl-4">
-            <li>Built frontend auth flow + RBAC.</li>
-            <li>Implemented Socket.IO realtime editing.</li>
-            <li>Designed drag-and-drop scheduling interface.</li>
-            <li>Reverse-engineered inherited backend endpoints.</li>
+          <h3 className="text-h3 mb-2">🙋 My Contributions</h3>
+          <ul className="list-disc list-inside pl-2 text-body">
+            <li className="mb-1">Built frontend auth flow + RBAC.</li>
+            <li className="mb-1">Implemented Socket.IO realtime editing.</li>
+            <li className="mb-1">
+              Designed drag-and-drop scheduling interface.
+            </li>
+            <li className="mb-1">
+              Reverse-engineered inherited backend endpoints.
+            </li>
           </ul>
         </section>
 
-        <section className="pt-4" aria-label="Architecture">
+        <section className="pt-8" aria-label="Architecture">
           <div className="projectDescription_text">
-            <span className="text-2xl font-extrabold">
-              🏗️ Architecture & Stack
-            </span>
-            <ul>
+            <h2 className="text-h2 mb-2">🏗️ Architecture &amp; Stack</h2>
+            <ul className="text-caption">
               <li>
-                <span className="font-bold">Frontend:</span> React, Bootstrap
+                <span className="font-bold text-body">Frontend:</span> React,
+                Bootstrap
               </li>
               <li>
-                <span className="font-bold">Backend:</span> Node.js, Express
+                <span className="font-bold text-body">Backend:</span> Node.js,
+                Express
               </li>
               <li>
-                <span className="font-bold">Database:</span> PostgreSQL
+                <span className="font-bold text-body">Database:</span>{" "}
+                PostgreSQL
               </li>
               <li>
-                <span className="font-bold">Realtime:</span> Socket.IO
+                <span className="font-bold text-body">Realtime:</span> Socket.IO
               </li>
               <li>
-                <span className="font-bold">Auth:</span> JWT, bcrypt
+                <span className="font-bold text-body">Auth:</span> JWT, bcrypt
               </li>
               <li>
-                <span className="font-bold">Other:</span> REST APIs
+                <span className="font-bold text-body">Other:</span> REST APIs
               </li>
             </ul>
           </div>
 
           <div className="projectDescription_text">
-            <span className="text-xl font-extrabold">
-              🤔 Why this approach?
-            </span>
-            <ul className="list-disc list-inside pl-4">
-              <li>
+            <h3 className="text-h3 mb-2">🤔 Why this approach?</h3>
+            <ul className="list-disc list-inside pl-2 text-body">
+              <li className="mb-1">
                 Concurrency ➡️ real-time collab replaces single-editor doc.
               </li>
-              <li>Clarity ➡️ RBAC + audit logs reduce conflicts.</li>
-              <li>Speed ➡️ React + Express enabled 4-week MVP.</li>
-              <li>Extensibility ➡️ clean handoff for next cohort.</li>
+              <li className="mb-1">
+                Clarity ➡️ RBAC + audit logs reduce conflicts.
+              </li>
+              <li className="mb-1">
+                Speed ➡️ React + Express enabled 4-week MVP.
+              </li>
+              <li className="mb-1">
+                Extensibility ➡️ clean handoff for next cohort.
+              </li>
             </ul>
           </div>
         </section>
 
-        <section className="projectDescription_text pt-4">
-          <span className="text-2xl font-extrabold">🏆 Outcomes</span>
-          <ul className="list-disc list-inside pl-4">
-            <li>Delivered MVP demoed to faculty head.</li>
-            <li>Documented for future cohorts.</li>
-            <li>Next steps: hosting, accounts, staged rollout.</li>
+        <section className="projectDescription_text pt-8">
+          <h2 className="text-h2 mb-2">🏆 Outcomes</h2>
+          <ul className="list-disc list-inside pl-2 text-body">
+            <li className="mb-1">Delivered MVP demoed to faculty head.</li>
+            <li className="mb-1">Documented for future cohorts.</li>
+            <li className="mb-1">
+              Next steps: hosting, accounts, staged rollout.
+            </li>
           </ul>
         </section>
 
         <section className="projectDescription_text">
-          <span className="text-xl font-extrabold">
-            📓 Process Notes & Lessons
-          </span>
-          <ul className="list-disc list-inside pl-4">
-            <li>Inherited codebase ➡️ solved via endpoint exploration.</li>
-            <li>Weekly sprints kept us on track.</li>
-            <li>UX hindsight ➡️ simplify calendar UI + accessibility.</li>
+          <h3 className="text-h3">📓 Process Notes &amp; Lessons</h3>
+          <ul className="list-disc list-inside pl-2 text-body">
+            <li className="mb-1">
+              Inherited codebase ➡️ solved via endpoint exploration.
+            </li>
+            <li className="mb-1">Weekly sprints kept us on track.</li>
+            <li className="mb-1">
+              UX hindsight ➡️ simplify calendar UI + accessibility.
+            </li>
           </ul>
         </section>
       </div>
@@ -240,7 +257,7 @@ export default function SotByCaseStudy() {
           </svg>
           <span className="ml-2">View on Github</span>
         </a>
-        <div className="divider-line text-primary">03</div>
+        <div className="divider-line-proj text-primary">03</div>
       </div>
     </div>
   );
