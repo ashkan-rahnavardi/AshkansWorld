@@ -42,12 +42,9 @@ export function ProjectCard({ project }: { project: Project }) {
         className={`relative block z-10 parallax-effect ${bgSize}`}
       >
         <div
-          className="absolute inset-0 opacity-60"
+          className="absolute inset-0 opacity-60 project-card-bg"
           style={{
             backgroundImage: `url(${imageUrl})`,
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
           }}
         ></div>
         <div className="absolute bottom-0 text-primary inner-element -left-14 md:-left-8 w-24">

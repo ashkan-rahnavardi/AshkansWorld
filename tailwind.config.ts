@@ -20,11 +20,6 @@ const config: Config = {
       jetbrains: ["JetBrains Mono", "ui-monospace", "monospace"],
     },
     extend: {
-      // fontSize: {
-      //   // nav: ["22px", { lineHeight: "1" }],
-      //
-      //   nav: "22px",
-      // },
       colors: {
         primary: "#f9f9f9",
         primaryDark: "#494949",
@@ -159,68 +154,6 @@ const config: Config = {
           },
         ],
       },
-      // fontSize: {
-      //   "display-lg": [
-      //     "39px",
-      //     { lineHeight: "1.6", letterSpacing: "0.015em", fontWeight: "800" },
-      //   ],
-      //   "display-md": [
-      //     "35px",
-      //     { lineHeight: "1.6", letterSpacing: "0.015em", fontWeight: "800" },
-      //   ],
-      //   h1: [
-      //     "31px",
-      //     { lineHeight: "1.6", letterSpacing: "0.02em", fontWeight: "700" },
-      //   ],
-      //   h2: [
-      //     "25px",
-      //     { lineHeight: "1.6", letterSpacing: "0.02em", fontWeight: "600" },
-      //   ],
-      //   h3: [
-      //     "22px",
-      //     { lineHeight: "1.6", letterSpacing: "0.025em", fontWeight: "600" },
-      //   ],
-      //   h4: [
-      //     "20px",
-      //     { lineHeight: "1.6", letterSpacing: "0.025em", fontWeight: "500" },
-      //   ],
-      //   h5: [
-      //     "19px",
-      //     { lineHeight: "1.6", letterSpacing: "0.03em", fontWeight: "500" },
-      //   ],
-      //   h6: [
-      //     "18px",
-      //     { lineHeight: "1.6", letterSpacing: "0.03em", fontWeight: "500" },
-      //   ],
-      //   "body-xl": [
-      //     "17px",
-      //     { lineHeight: "1.6", letterSpacing: "0.03em", fontWeight: "400" },
-      //   ],
-      //   body: [
-      //     "16px",
-      //     { lineHeight: "1.6", letterSpacing: "0.03em", fontWeight: "400" },
-      //   ],
-      //   "body-sm": [
-      //     "15px",
-      //     { lineHeight: "1.7", letterSpacing: "0.03em", fontWeight: "400" },
-      //   ],
-      //   "caption-lg": [
-      //     "14px",
-      //     { lineHeight: "1.7", letterSpacing: "0.03em", fontWeight: "400" },
-      //   ],
-      //   caption: [
-      //     "14px",
-      //     { lineHeight: "1.7", letterSpacing: "0.03em", fontWeight: "400" },
-      //   ],
-      //   "caption-sm": [
-      //     "13px",
-      //     { lineHeight: "1.7", letterSpacing: "0.03em", fontWeight: "300" },
-      //   ],
-      //   overline: [
-      //     "12px",
-      //     { lineHeight: "1.7", letterSpacing: "0.03em", fontWeight: "500" },
-      //   ],
-      // },
     },
   },
   plugins: [],
