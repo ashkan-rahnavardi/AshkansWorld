@@ -93,48 +93,6 @@
 }
 
 /* ===================================================================
-   BLOCK REVEAL ANIMATION
-   =================================================================== */
-.block-reveal {
-  align-items: center;
-  display: inline-block;
-  overflow: hidden;
-  position: relative;
-}
-
-.block-reveal--active .block-reveal__block {
-  animation: block-rev-block 0.8s;
-  animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
-}
-
-.block-reveal__block.white {
-  background-color: #f9f9f9;
-}
-
-.block-reveal__block {
-  background: #5918df;
-  content: "";
-  height: 100%;
-  position: absolute;
-  transform: translateX(calc(100% + 1px));
-  width: 100%;
-  will-change: transform;
-  z-index: 1;
-}
-
-.block-reveal--active .block-reveal__text {
-  animation: block-reveal-text 0s;
-  animation-delay: 0.4s;
-  animation-fill-mode: forwards;
-  will-change: transform, opacity;
-}
-
-.block-reveal__text {
-  margin: 0.3em 0;
-  opacity: 0;
-}
-
-/* ===================================================================
    TYPOGRAPHY & TEXT UTILITIES
    =================================================================== */
 .subtitle {
@@ -174,15 +132,6 @@
 /* ===================================================================
    LAYOUT SYSTEMS (Grid, Container, Row)
    =================================================================== */
-.section-start {
-  margin-bottom: 1rem !important;
-  padding-bottom: 1rem !important;
-}
-
-.section-showyou {
-  margin-top: 0.5rem !important;
-  padding-top: 1rem !important;
-}
 
 .section-container {
   flex: 0 0 75%;
@@ -286,8 +235,6 @@
     height: 407px;
   }
 }
-
-
 
 .rtb {
   width: 455px;

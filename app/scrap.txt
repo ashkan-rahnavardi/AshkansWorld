@@ -1,5 +1,0 @@
-
-
-text_start_main
-  - font-weight: 700
-  - 

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 import useTextScramble from "../_hooks/useScrambleText";
+import { BlockReveal } from "./BlockReveal";
 
 const texts = ["things", "websites", "web apps", "ui/ux", "tools"] as const;
 
@@ -37,55 +38,34 @@ function Start() {
               <div className="bullet"></div>
             </div>
 
-            <div
-              className={
-                reveal[1] ? "block-reveal block-reveal--active" : "block-reveal"
-              }
-            >
-              <span className="block-reveal__block white"></span>
-              <small className="text_timeline-title block-reveal__text section-start">
+            <BlockReveal active={reveal[1]} variant="white">
+              <small className="text_timeline-title">
                 Start<span className="ml-1">/&gt;</span>
               </small>
-            </div>
-            <br />
+            </BlockReveal>
 
-            <div className="block-reveal block-reveal--active">
-              <span className="block-reveal__block"></span>
-              <h1 className="block-reveal__text text_start_main mb-0">
+            <BlockReveal active={true}>
+              <h1 className="text_start_main">
                 Hi, my name is{" "}
                 <strong className="text-purple font-black">
                   Ashkan Rahnavardi
                 </strong>
                 <br></br>
               </h1>
-            </div>
-            <br />
+            </BlockReveal>
 
-            <div
-              className={
-                reveal[0] ? "block-reveal block-reveal--active" : "block-reveal"
-              }
-            >
-              <span className="block-reveal__block"></span>
-              <h1 className="block-reveal__text text_start_main mt-0 ws-nowrap">
+            <BlockReveal active={reveal[0]} className="ws-nowrap">
+              <h1 className="text_start_main">
                 I <em className="font-serif font-normal">design</em> and{" "}
                 <span className="font-mono font-bold">develop</span>{" "}
                 <br className="newline" />
                 <span className="scramble">{scrambledText}</span>
               </h1>
-            </div>
-            <br />
+            </BlockReveal>
 
-            <div
-              className={
-                reveal[2] ? "block-reveal block-reveal--active" : "block-reveal"
-              }
-            >
-              <span className="block-reveal__block white"></span>
-              <p className="text_start_sub block-reveal__text section-showyou">
-                Let me show you...
-              </p>
-            </div>
+            <BlockReveal active={reveal[2]} variant="white">
+              <p className="text_start_sub">Let me show you...</p>
+            </BlockReveal>
           </div>
         </div>
       </div>
